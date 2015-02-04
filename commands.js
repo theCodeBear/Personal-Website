@@ -11,25 +11,40 @@ function ls() {
 
 function cd(path, dir) {
   console.log("1: entered cd()");
-  console.log('current Directory: ' + dir[currentDirectory]+','+dir+','+currentDirectory);
-  if (dir[currentDirectory]) {
+  console.log('current dirObjectory: ' + JSON.stringify(dir[currentDirectory[0]][currentDirectory[1]]) +', '+JSON.stringify(dir)+', '+currentDirectory);
+  var curDirObj;
+  switch (currentDirectory.length) {
+    case 1:
+      curDirObj = dir[currentDirectory[0]];
+    break;
+    case 2:
+      curDirObj = dir[currentDirectory[0]][currentDirectory[1]];
+    break;
+    case 3:
+      curDirObj = dir[currentDirectory[0]][currentDirectory[1]][currentDirectory[2]];
+    break;
+    case 4:
+      curDirObj = dir[currentDirectory[0]][currentDirectory[1]][currentDirectory[2]][currentDirectory[3]];
+    break;
+  }
+  if (curDirObj) {
     console.log("2: found current directory");
-    var ls = Object.keys(dir[currentDirectory]);// || "";
+    var ls = Object.keys(curDirObj);// || "";
     console.log(ls);
     // ls = ls.split(",");
     for (item in ls) {
       console.log(ls[item]);
       if (ls[item] === path) {
-        console.log("3: found dir cd'ing to");
-        console.log('dir: ' +dir);
-        console.log('curdir: ' + currentDirectory);
-        console.log('path: ' + path);
-        console.log(dir[currentDirectory][path]);
-        console.log(Object.keys(dir[currentDirectory][path]));
-        var keys = Object.keys(dir[currentDirectory][path]);
+        // console.log("3: found dir cd'ing to");
+        // console.log('dir: ' +dir);
+        // console.log('curdir: ' + currentDirectory);
+        // console.log('path: ' + path);
+        // console.log(dir[currentDirectory][path]);
+        // console.log(Object.keys(dir[currentDirectory][path]));
+        var keys = Object.keys(curDirObj[path]);
         var values = [];
-        Object.keys(dir[currentDirectory][path]).forEach(function(e, i) {
-          values.push(dir[currentDirectory][path][e]);
+        Object.keys(curDirObj[path]).forEach(function(e, i) {
+          values.push(curDirObj[path][e]);
         });
         console.log(values);
         var htmlString = "";
@@ -38,13 +53,13 @@ function cd(path, dir) {
         }
         // console.log(Object.values(dir[currentDirectory][path]));
         // return JSON.stringify(dir[currentDirectory][path]);
-        currentDirectory += path;
+        currentDirectory.push(path);
         return htmlString;
       }
     }
     if (path === "..") {
       console.log("5: happens on ..");
-      alert("..");
+      currentDirectory.pop();
       return "went up";
     }
   } else {
@@ -56,9 +71,17 @@ function cd(path, dir) {
 }
 
 function pwd(currentDir) {
-  return currentDir;
+  return currentDir.join("");
 }
 
+// shows a history of all the commands from the current session
+function history() {
+  var temp = "";
+  for (var i=0; i<commandHistory.length-1; i++) {
+    temp += commandHistory[i]+"<br>";
+  }
+  return temp;
+}
 
 $(function() {
 

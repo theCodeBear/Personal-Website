@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: white;
+  font-family: Courier;
 }
 
 input {
@@ -8,8 +9,8 @@ input {
   background-color: black;
   outline: none;
   color: lightgreen;
-  font-family: inconsolata;
-  font-size: 1.2em;
+  font-family: Courier;
+  font-size: 1.1em;
 }
 
 a {
