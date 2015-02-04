@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+input {
+  border: none;
+  background-color: black;
+  outline: none;
+  color: lightgreen;
+  font-family: inconsolata;
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: #88F;
+  font-style: italic;
+}
+
+.orange {
+  color: #F90;
+}
+
+.indent {
+  margin-left: 3em;
+}
