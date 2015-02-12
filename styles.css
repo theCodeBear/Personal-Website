@@ -1,7 +1,7 @@
 body {
   background-color: black;
   color: white;
-  font-family: Courier;
+  font-family: "Menlo";
 }
 
 input {
@@ -9,7 +9,7 @@ input {
   background-color: black;
   outline: none;
   color: lightgreen;
-  font-family: Courier;
+  font-family: "Menlo";
   font-size: 1.1em;
   width: 50%;
 }

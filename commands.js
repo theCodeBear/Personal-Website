@@ -18,35 +18,48 @@ function getDirObjPath() {
   return curDirObj;
 }
 
-function portfolio() {
-  return "this is portfolio";
-}
-
 function ls() {
   var curDirObj = getDirObjPath();
-  if (curDirObj)
-    return Object.keys(curDirObj).join("<br>");
+  // if there is something in the folder
+  if (curDirObj) {
+    var values = [];
+    Object.keys(curDirObj).forEach(function(e,i) {
+      values.push(curDirObj[e]);
+    });
+    var htmlString = "";
+    var keys = Object.keys(curDirObj);
+    for (var i=0; i< values.length; i++) {
+      // console.log(JSON.stringify(values[i]) + ": " + typeof(values[i]));
+      if (typeof(values[i]) === 'string' && values[i].match(/^http/)) {
+        htmlString += "<a href='" + values[i] + "'>" + values[i] + "</a><br>";
+      } else if (typeof(values[i]) === 'string') {
+          htmlString += "<span>"+values[i]+"</span><br>";
+      } else {
+        htmlString += "<span>"+keys[i]+"</span><br>";
+      }
+    }
+    return htmlString;
+    // return Object.keys(curDirObj).join("<br>");
+  }
+  // if there is nothing in the folder
   return '';
 }
 
 function cd(path, dir) {
-  console.log("1: entered cd()");
-  // console.log('current dirObjectory: ' + JSON.stringify(dir[currentDirectory[0]][currentDirectory[1]]) +', '+JSON.stringify(dir)+', '+currentDirectory);
-  curDirObj = getDirObjPath();
+  var curDirObj = getDirObjPath();
   if (curDirObj) {
-    console.log("2: found current directory");
     var ls = Object.keys(curDirObj);
-    // console.log(ls);
-    // ls = ls.split(",");
+    console.log("title? "+ curDirObj.title);
+    if (curDirObj.title && path !== ".." && path !== "~" && path !== "") {
+      return 'Cannot cd. This is not a directory';
+    }
     for (item in ls) {
-      // console.log(ls[item]);
       if (ls[item] === path) {
-        // console.log("3: found dir cd'ing to");
-        var keys = Object.keys(curDirObj[path]);
-        var values = [];
-        Object.keys(curDirObj[path]).forEach(function(e, i) {
-          values.push(curDirObj[path][e]);
-        });
+        // var keys = Object.keys(curDirObj[path]);
+        // var values = [];
+        // Object.keys(curDirObj[path]).forEach(function(e, i) {
+        //   values.push(curDirObj[path][e]);
+        // });
         // console.log(values);
         // var htmlString = "";
         // for (var i=0; i<values.length; i++) {
@@ -58,14 +71,12 @@ function cd(path, dir) {
       }
     }
     if (path === "..") {
-      console.log("5: happens on ..");
-      // prevent ability to "cd .." while in the root
-      if (currentDirectory.join(",") === '/') return '';
-      // pop a path off to go into parent directory
-      currentDirectory.pop();
+      if (currentDirectory.join(",") === 'home') return '';        // prevent ability to "cd .." while in the root
+      currentDirectory.pop();                                   // pop a path off to go into parent directory
+      return '';
     } else if (path === "" || path === "~") {
       currentDirectory = currentDirectory.slice(0,1);
-      return "";
+      return '';
     } else {
       return 'Error: Invalid input. For help run command: help';
     }
@@ -78,7 +89,7 @@ function cd(path, dir) {
 }
 
 function pwd(currentDir) {
-  return currentDir.join("");
+  return currentDir.join("/");
 }
 
 // shows a history of all the commands from the current session
