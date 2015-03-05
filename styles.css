@@ -20,6 +20,10 @@ a {
   font-style: italic;
 }
 
+img {
+  max-height: 100%;
+}
+
 .orange {
   color: #F90;
 }
@@ -27,3 +31,4 @@ a {
 .indent {
   margin-left: 3em;
 }
+
