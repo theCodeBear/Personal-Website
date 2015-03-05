@@ -1,11 +1,5 @@
 /* Style for visual version of the website */
 
-body {
-  /* background-color: black;
-  background: url(img/AT_pic.JPG);
-  background-size: cover; */
-}
-
 
 header {
   margin-top: 2em;
@@ -18,14 +12,8 @@ h2 {
   font-family: 'Play', sans-serif;
 }
 
-li {
-  /* display: block; */
-}
-
-#portfolio img {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 10px;
+i {
+  color: #000;
 }
 
 .fa .fa-linkedin-square .fa-3x {
@@ -39,4 +27,10 @@ li {
 .icon {
   width: 42px;
   height: 42px;
+}
+
+#portfolio img {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
 }
