@@ -8,7 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="mainStyles.css">
   </head>
-  <body>
+  <body ng-app='krone' ng-controller='main'>
     <div class="container-fluid">
       <div class="row" id="mainDisplay">
         <div class="row">
@@ -64,114 +64,55 @@
     </div>
 
 
-    <!-- KidMath Project -->
-    <a href="https://morning-eyrie-5597.herokuapp.com">
-      <div class='row'>
-        <div class="col-md-6">
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <h2 class="projectTitle">Kid Math</h2>
+    <!-- Portfolio -->
+    <div ng-repeat='project in projects'>
+      <a href="{{project.url}}">
+        <div class='row'>
+          <div class="col-md-6">
+            <div class='row'>
+              <div class='col-md-10 col-md-offset-1'>
+                <h2 class="projectTitle">{{project.title}}</h2>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-10 col-md-offset-1'>
+                <h4> Description </h4>
+                <p class="projectDescription">
+                  {{project.description}}
+                </p>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-10 col-md-offset-1'>
+                <p class="projectTech">
+                    <span ng-repeat='tech in project.techs' class='tags'>{{tech}}</span>
+                </p>
+              </div>
             </div>
           </div>
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <h4> Description </h4>
-              <p class="projectDescription">
-                Basic math app for children to learn arithmetic. Currently only basic functionality.
-                Note: view in 'device mode' as the app is styled for mobile devices.
-              </p>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <!-- <h4> Tech </h4> -->
-              <p class="projectTech">
-                <span class='tags'>JavaScript</span>
-                <span class='tags'>Angular</span>
-              </p>
-            </div>
+          <div class="col-md-6 text-center">
+            <img class='projectPics' src="{{project.picture}}" alt='Kid Math'>
           </div>
         </div>
-        <div class="col-md-6 text-center">
-          <img class='projectPics' src="img/KidMath_pic.png" alt='Kid Math'>
-        </div>
+      </a>
+
+      <hr>
+    </div>
+
+    <div id='aboutMeSection'>
+      <div class='row text-center'>
+        <h1> About Me </h1>
       </div>
-    </a>
-
-    <hr>
-
-    <!-- Drawing Demo Project -->
-    <a href="projects/canvasDemo.html">
-      <div class='row'>
-        <div class="col-md-6">
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <h2 class="projectTitle">Drawing Demo</h2>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <h4> Description </h4>
-              <p class="projectDescription">
-                Demo Drawing Project to learn how to use the HTML5 Canvas.
-              </p>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <!-- <h4> Tech </h4> -->
-              <p class="projectTech">
-                <span class='tags'>JavaScript</span>
-                <span class='tags'>jQuery</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 text-center">
-          <img class='projectPics' src="img/canvasDraw_screenShot.png" alt='Drawing Demo'>
-        </div>
-      </div>
-    </a>
-
-    <hr>
-
-    <!-- Sigma Shooter Project -->
-    <a href="projects/SigmaShooter.html">
-      <div class='row'>
-        <div class="col-md-6">
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <h2 class="projectTitle">Sigma Shooter</h2>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <h4> Description </h4>
-              <p class="projectDescription">
-                Console Shoot 'em Up game created as my final project in a college Assembly Language course. Written using the MASM Assembler in Visual Studio 2010.
-              </p>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-              <!-- <h4> Tech </h4> -->
-              <p class="projectTech">
-                <span class='tags'>Assembly Language</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 text-center">
-          <img class='projectPics' src="img/SigmaShooter_screenShot.png" alt='SigmaShooter'>
-        </div>
-      </div>
-    </a>
-
-    <hr>
+      <p id='aboutMe'>
+        After going back to school to study Computer Science I attended Coding House developer bootcamp in California to learn web development. Currently I am a Teaching Assistant at Coding House as I look for jobs in the Bay Area. I code in Vim and Sublime. I work in full stack JavaScript generally using Hapi.js and Angular.
+      </p>
+    </div>
 
     <p class='text-center'> Bay Area, CA </p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src='ngcontroller.js'></script>
     <script src="index.js"></script>
   </body>
 </html>
