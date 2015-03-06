@@ -43,7 +43,9 @@ hr {
 }
 
 .icons {
-  margin-bottom: 6em;
+  background-color: rgba(255,255,255,0.3);
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .icon {
@@ -87,7 +89,7 @@ hr {
 #title {
   text-align: center;
   margin: 0;
-  margin-bottom: 7em;
+  margin-bottom: 11em;
 }
 
 #aboutMe {
@@ -97,8 +99,8 @@ hr {
 #hireMeRow {
   text-align: center;
   background-color: black;
-  padding-top: 3em;
-  padding-bottom: 4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 #hireMeRow img {
