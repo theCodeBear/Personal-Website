@@ -15,4 +15,14 @@ $(function() {
     else
       $('#mainDisplay').css('background', 'url(' + logos[i] + ') no-repeat center center fixed');
   });
+
+
+  var $window = $(window);
+  var $stickyEl = $('#stickyDiv');
+  var elTop = $stickyEl.offset().top;
+
+  $window.scroll(function() {
+    $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+  });
+
 });

@@ -80,6 +80,11 @@ hr {
   margin-right: 1em;
 }
 
+#stickyDiv.sticky {
+  position: fixed;
+  top: 0;
+}
+
 #portfolio img {
   height: 100%;
   width: 100%;
@@ -121,6 +126,15 @@ hr {
 #hireMe:hover {
   background: #fff;
   color: #000;
+}
+
+#aboutMeTitle {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#aboutMeSection {
+  margin-bottom: 6em;
 }
 
 @-webkit-keyframes pulse {
