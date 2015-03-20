@@ -96,7 +96,9 @@ function commands(command) {
                 <div class='indent'> sounds </div>
                 <div class='indentMore'> Toggle sounds on and off. </div>
                 <div class='indent'> virtualDOM </div>
-                <div class='indentMore'> Have you ever wondered what the virtual DOM is like? Now's your chance to find out. Note: extremely annoying sounds may ensue. </div>`;
+                <div class='indentMore'> Have you ever wondered what the virtual DOM is like? Now is your chance to find out. Note: extremely annoying sounds may ensue. </div>
+                <div class='indent'> shadowDOM </div>
+                <div class='indentMore'> The secret Shadow DOM that hides HTML is finally shown here in its raw naked form! </div>`;
         break;
       case 'ls':
         if (sounds) new Audio('../audio/ls.wav').play();
@@ -120,7 +122,11 @@ function commands(command) {
         break;
       case 'virtualDOM':
         // $('../audio')[0].pause();
-        location.href="virtualDOM.html";
+        location.href="virtualDom.html";
+        return '';
+        break;
+      case 'shadowDOM':
+        location.href='shadowDom.html';
         return '';
         break;
       case 'sounds':
