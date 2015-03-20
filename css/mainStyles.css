@@ -119,10 +119,10 @@ hr {
   padding-bottom: 1em;
 }
 
-#hireMeRow img {
+/*#hireMeRow img {
   max-width: 10%;
   border: 1px solid red;
-}
+}*/
 
 #hireMe {
   background: transparent;
@@ -148,7 +148,7 @@ hr {
   margin-bottom: 6em;
 }
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes throb {
   0%, 100% {
     text-shadow: 0;
   }
@@ -157,7 +157,7 @@ hr {
   }
 }
 
-keyframes pulse {
+keyframes throb {
   0%, 100% {
     text-shadow: 0;
   }
@@ -166,11 +166,11 @@ keyframes pulse {
   }
 }
 
-.pulse {
-  -webkit-animation-name: pulse;
+.throb {
+  -webkit-animation-name: throb;
   -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
-  animation-name: pulse;
+  animation-name: throb;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }

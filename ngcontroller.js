@@ -20,7 +20,7 @@ angular.module('krone', [])
       title: "Drawing Demo",
       url: "projects/canvasDemo.html",
       description: "Demo Drawing Project to learn how to use the HTML5 Canvas.",
-      picture: "img/canvasDraw_screenShot.png",
+      picture: "img/CanvasDraw_screenShot.png",
       techs: ["JavaScript", "jQuery", "HTML5 Canvas"]
     },
     {
