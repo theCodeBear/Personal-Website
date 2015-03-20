@@ -38,6 +38,10 @@ hr {
   /*border-color: #CCC;*/
 }
 
+.container-fluid {
+  overflow-x: hidden;
+}
+
 .fa .fa-linkedin-square .fa-3x {
   margin: 0;
 }
@@ -96,7 +100,7 @@ hr {
 #title {
   text-align: center;
   margin: 0;
-  margin-bottom: 11em;
+  margin-bottom: 11.5em;
 }
 
 #aboutMe {
@@ -106,8 +110,8 @@ hr {
 #hireMeRow {
   text-align: center;
   background-color: black;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 #hireMeRow img {
@@ -162,4 +166,6 @@ keyframes pulse {
   -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
