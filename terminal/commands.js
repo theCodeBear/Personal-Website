@@ -20,7 +20,7 @@ function getDirObjPath() {
 
 function ls() {
   var curDirObj = getDirObjPath();
-  // if there is something in the folder
+// if there is something in the folder
   if (curDirObj) {
     var values = [];
     Object.keys(curDirObj).forEach(function(e,i) {
@@ -29,7 +29,7 @@ function ls() {
     var htmlString = "";
     var keys = Object.keys(curDirObj);
     for (var i=0; i< values.length; i++) {
-      // console.log(JSON.stringify(values[i]) + ": " + typeof(values[i]));
+    // console.log(JSON.stringify(values[i]) + ": " + typeof(values[i]));
       if (typeof(values[i]) === 'string' && values[i].match(/^http/)) {
         htmlString += "<a href='" + values[i] + "'>" + values[i] + "</a><br>";
       } else if (typeof(values[i]) === 'string') {
@@ -39,9 +39,8 @@ function ls() {
       }
     }
     return htmlString;
-    // return Object.keys(curDirObj).join("<br>");
   }
-  // if there is nothing in the folder
+// if there is nothing in the folder
   return '';
 }
 
@@ -55,18 +54,7 @@ function cd(path, dir) {
     }
     for (item in ls) {
       if (ls[item] === path) {
-        // var keys = Object.keys(curDirObj[path]);
-        // var values = [];
-        // Object.keys(curDirObj[path]).forEach(function(e, i) {
-        //   values.push(curDirObj[path][e]);
-        // });
-        // console.log(values);
-        // var htmlString = "";
-        // for (var i=0; i<values.length; i++) {
-        //   htmlString += "<a href='"+values[i]+"'>"+keys[i]+"</a><br>";
-        // }
         currentDirectory.push(path);
-        // return htmlString;
         return '';
       }
     }
@@ -100,7 +88,3 @@ function history() {
   }
   return temp;
 }
-
-$(function() {
-
-});

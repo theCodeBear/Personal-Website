@@ -35,7 +35,6 @@ hr {
   width: 94%;
   border-width: 2px;
   border-style: solid;
-  /*border-color: #CCC;*/
 }
 
 .container-fluid {
@@ -118,11 +117,6 @@ hr {
   padding-top: 1em;
   padding-bottom: 1em;
 }
-
-/*#hireMeRow img {
-  max-width: 10%;
-  border: 1px solid red;
-}*/
 
 #hireMe {
   background: transparent;

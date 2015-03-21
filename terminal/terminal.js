@@ -7,43 +7,38 @@ var commandPrompt3 = "]$ ";
 
 $(function() {
   var sounds = false;
-  // var song = ['../audio/MortalKombatSong.mp3', '../audio/starWars.mp3', '../audio/terminator.mp3'];
-  // var playThis = Math.floor(Math.random()*3);
-  // $('../audio').attr('src', song[playThis]);
-  // $('../audio')[0].play();
 
-  // set the focus to the terminal input (textbox) when the page loads
+// set the focus to the terminal input (textbox) when the page loads
   $("input").focus();
+  $('input').val('');
 
-  // holds the latest input from the user
+// holds the latest input from the user
   var input;
   var display;
 
-  // click anywhere on screen and the focus returns to the current terminal input
+// click anywhere on screen and the focus returns to the current terminal input
   $(document).on("click", function() {
     $('input').last().focus();
   });
 
-  // on enter press execute command
+// on enter press execute command
   $(document).keydown(function(event) {
-
-
     if (event.which == 13) {                // on ENTER press execute command
       input = $("input").last().val();
-      // adds latest user input to the history array if it wasn't empty
+    // adds latest user input to the history array if it wasn't empty
       if (input)
         commandHistory.push(input);
-      // call commands function to get actions to commands
+    // call commands function to get actions to commands
       display = commands(input);//.toLowerCase());
-      // display the results of the commands
+    // display the results of the commands
       $('body').append($('<div class="orange indent">'+display+'</div>'));
-      // make the textbox readonly since the user has already pressed enter on it
+    // make the textbox readonly since the user has already pressed enter on it
       $('input').last().prop('readonly', true);
-      // create the next command line prompt and put focus on its textbox
+    // create the next command line prompt and put focus on its textbox
       if (commandPrompt2 !== "") commandPrompt2 = currentDirectory[currentDirectory.length-1];
       $('body').append($('<div>' + commandPrompt + commandPrompt2 + commandPrompt3 + '<input type="textbox" name="cli" id="cli" ></div>'));
       $('input').last().focus();
-      // set commandHistoryIndex to end of commandHistory array for use on next prompt
+    // set commandHistoryIndex to end of commandHistory array for use on next prompt
       commandHistoryIndex = commandHistory.length;
     } else if (event.which == 38) {         // on UP arrow press traverse back through history of commands
       event.preventDefault();               // preventDefault puts the cursor at the end of the text instead of at the beginning when pressing up
@@ -121,7 +116,6 @@ function commands(command) {
         return '';
         break;
       case 'virtualDOM':
-        // $('../audio')[0].pause();
         location.href="virtualDom.html";
         return '';
         break;

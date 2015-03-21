@@ -7,13 +7,11 @@ $(function() {
   }
   
   setInterval(function() {
-    new Audio('../../audio/audio1.wav').play();
+    new Audio('../../audio/shadow.wav').play();
     for (var i=1; i<=15; i++) {
       $('#div'+i).css('backgroundColor', getRandColor());
-      // $('#div'+i).css('filter', 'grayscale(100%)');
     }
     $('span').css('color', getRandColor());
-    // $('span').css('filter', 'grayscale(100%)');
   }, 100);
 
 
