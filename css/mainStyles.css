@@ -1,5 +1,9 @@
 /* Style for visual version of the website */
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   margin-top: 1em;
   margin-bottom: 2em;
@@ -71,6 +75,10 @@ footer {
   min-height: 200px;
 }
 
+.projectPics:hover {
+  cursor: pointer;
+}
+
 .inline {
   display: inline;
 }
@@ -99,8 +107,12 @@ footer {
 
 .video {
   display: fixed;
-  height: 600px;
-  width: 800px;
+  /*height: 600px;*/
+  /*width: 800px;*/
+}
+
+.openVideo:hover {
+  cursor: pointer;
 }
 
 #mainDisplay {

@@ -16,7 +16,7 @@
         </div>
 
         <div id='replacementSpace'></div>
-        <div class="row">
+        <div class="row jobTitle">
           <div class="col-md-6 col-md-offset-3" style="padding: 0;">
             <div class="col-md-12 no-padding-margin" style="text-align: right;">
               <h2 class="inline-block throb" id='title'> Full Stack Web Developer </h2>
@@ -51,10 +51,33 @@
           </div>
 
           <div class="row" id="hireMeRow">
-            <button id="hireMe" type="button">Hire Me</button>
+            <button id="hireMe" data-toggle="modal" data-target="#hireMeModal">Hire Me</button>
+
+            <div class="modal fade" id='hireMeModal'>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click='clearForm()'><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Contact Me</h4>
+                  </div>
+                  <div class="modal-body">
+                      <input type='email' class='form-control' ng-model='email' placeholder='Your Email' maxlength='50'><br>
+                      <input type='text' class='form-control' ng-model='name' placeholder='Your Name' maxlength='30'><br>
+                      <input type='text' class='form-control' ng-model='msgTitle' placeholder='Subject Title' maxlength='70'><br>
+                      <textarea class='form-control' rows='8' ng-model='msg' placeholder='Message'></textarea>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click='clearForm()' data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click='hireMe()'>Send Email</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
           </div>
         </div>
       </div>
+
 
       <section>
         <div class='row text-center'>
@@ -81,7 +104,7 @@
                 </div>
               </div>
               <div class='row'>
-                <div id= 'techs' class='col-md-10 col-md-offset-1'>
+                <div class='techs col-md-10 col-md-offset-1'>
                   <p class="projectTech" style='word-wrap: break-word;'>
                       <div style='display: inline;' ng-repeat='tech in project.techs' class='tags'>{{tech}}</div>
                   </p>
@@ -94,9 +117,75 @@
               </a>
             </div>
           </div>
-
           <hr>
         </div>
+
+      <!-- Sigma Shoooter Portfolio Project -->
+        <div class='row'>
+            <div class="col-md-6">
+              <div class='row'>
+                <div class='col-md-10 col-md-offset-1'>
+                  <!-- <span class='openVideo' data-toggle='modal' data-target='#sigmaShooterVideo'> -->
+                    <h2 class="projectTitle openVideo" data-toggle='modal' data-target='#sigmaShooterVideo'> Sigma Shooter </h2>
+                  <!-- </span> -->
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-md-10 col-md-offset-1'>
+                  <h4> Description </h4>
+                  <p class="projectDescription">
+                    Console Shoot 'em Up game created as my final project in a college Assembly Language course. Written using the MASM Assembler in Visual Studio 2010.
+                  </p>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='techs col-md-10 col-md-offset-1'>
+                  <p class="projectTech" style='word-wrap: break-word;'>
+                      <div style='display: inline;' class='tags'>Assembly Language</div>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 text-center">
+              <img class='projectPics' data-toggle='modal' data-target='#sigmaShooterVideo' src="img/SigmaShooter_screenShot.png">
+            </div>
+          </div>
+          <hr>
+        <!-- </div> -->
+
+      <!-- Hill Cipher Portfolio Project -->
+        <div class='row'>
+            <div class="col-md-6">
+              <div class='row'>
+                <div class='col-md-10 col-md-offset-1'>
+                  <!-- <span class='openVideo' data-toggle='modal' data-target='#sigmaShooterVideo'> -->
+                    <h2 class="projectTitle openVideo" data-toggle='modal' data-target='#hillCipherVideo'> Hill Cipher </h2>
+                  <!-- </span> -->
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-md-10 col-md-offset-1'>
+                  <h4> Description </h4>
+                  <p class="projectDescription">
+                    Written in C++ using the Linear Algebra-related cryptographic Hill Cipher. Plain text is converted into a matrix, then encrypted using a randomly generated 3x3 matrix. The decryption involves calculating the inverse of the encryption matrix and applying it to the cipher text.
+                  </p>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='techs col-md-10 col-md-offset-1'>
+                  <p class="projectTech" style='word-wrap: break-word;'>
+                      <div style='display: inline;' class='tags'>C++</div>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <img class='projectPics' data-toggle='modal' data-target='#hillCipherVideo' src="img/hillCipher.png">
+            </div>
+          </div>
+          <hr>
+        </div>
+
       </section>
 
       <section id='aboutMeSection' class='row text-center'>
@@ -114,14 +203,60 @@
       </setion>
 
 
-    <footer>
-      <p class='text-center'> Bay Area, CA <br> - March 2015 - </p>
-    </footer>
+      <footer>
+        <p class='text-center'> Bay Area, CA <br> - March 2015 - </p>
+      </footer>
+
+      <!-- MODAL FOR SIGMA SHOOTER -->
+      <div class="modal fade" id='sigmaShooterVideo'>
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <div class='center'>
+                <h2><a href='https://github.com/theCodeBear/Sigma-Shooter'> <i class="fa fa-github"></i> View code on GitHub </a></h2>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class='center'>
+                <video class='video' width='498px' height='664px' controls>
+                  <source src="videos/SigmaShooter.mp4" type="video/mp4">
+                  Your browser does not support this video format.
+                </video>
+              </div>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <!-- MODAL FOR HILL CIPHER -->
+      <div class="modal fade" id='hillCipherVideo'>
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <div class='center'>
+                <h2><a href='https://github.com/theCodeBear/Hill-Cipher'> <i class="fa fa-github"></i> View code on GitHub </a></h2>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class='center'>
+                <video class='video' width='702px' height='450px' controls>
+                  <source src="videos/hillCipher.mp4" type="video/mp4">
+                  Your browser does not support this video format.
+                </video>
+              </div>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+    </div>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src='ngcontroller.js'></script>
       <script src="index.js"></script>
-    </div>
   </body>
 </html>
