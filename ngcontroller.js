@@ -22,21 +22,7 @@ angular.module('krone', [])
       description: "Demo Drawing Project to learn how to use the HTML5 Canvas.",
       picture: "img/CanvasDraw_screenShot.png",
       techs: ["JavaScript", "jQuery", "HTML5 Canvas"]
-    }//,
-    // {
-    //   title: "Sigma Shooter",
-    //   url: "projects/SigmaShooter.html",
-    //   description: "Console Shoot 'em Up game created as my final project in a college Assembly Language course. Written using the MASM Assembler in Visual Studio 2010.",
-    //   picture: "img/SigmaShooter_screenShot.png",
-    //   techs: ["Assembly Language"]
-    // },
-    // {
-    //   title: "Hill Cipher Encryption",
-    //   url: "projects/hillcipher.html",
-    //   description: "Written in C++ using the Linear Algebra-related cryptographic Hill Cipher. Plain text is converted into a matrix, then encrypted using a randomly generated 3x3 matrix. The decryption involves calculating the inverse of the encryption matrix and applying it to the cipher text.",
-    //   picture: "img/LinAlg_screenShot.png",
-    //   techs: ["C++"]
-    // }
+    }
   ];
 
   $scope.clearForm = function() {

@@ -32,6 +32,8 @@ function ls() {
     // console.log(JSON.stringify(values[i]) + ": " + typeof(values[i]));
       if (typeof(values[i]) === 'string' && values[i].match(/^http/)) {
         htmlString += "<a href='" + values[i] + "'>" + values[i] + "</a><br>";
+      } else if (typeof(values[i]) === 'string' && values[i].match(/^..\/img/)) {
+        htmlString += "<img width='300px' src='" + values[i] + "'><br>";
       } else if (typeof(values[i]) === 'string') {
           htmlString += "<span>"+values[i]+"</span><br>";
       } else {
@@ -48,7 +50,6 @@ function cd(path, dir) {
   var curDirObj = getDirObjPath();
   if (curDirObj) {
     var ls = Object.keys(curDirObj);
-    console.log("title? "+ curDirObj.title);
     if (curDirObj.title && path !== ".." && path !== "~" && path !== "") {
       return 'Cannot cd. This is not a directory';
     }
