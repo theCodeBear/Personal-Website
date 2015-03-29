@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/mainStyles.css">
+    <link rel="stylesheet" media="screen and (min-width: 750px)" href="css/mainStyles.css">
+    <!-- css for mobile-sized devices -->
+    <link rel="stylesheet" media='screen and (max-width: 749px)' href="css/mobileStyles.css">
   </head>
   <body ng-app='krone' ng-controller='main'>
     <div class="container-fluid">
@@ -27,32 +29,33 @@
 
         <div id='stickyDiv'>
           <div class="row icons">
-            <div class="col-md-12 text-center">
-              <div class="col-md-1 col-md-offset-3">
+            <div class="col-md-12 col-xs-12 text-center">
+              <div class="col-md-1 col-md-offset-3 col-xs-1 col-xs-offset-3">
                 <a href="https://github.com/theCodeBear"<i class="fa fa-github fa-3x"></i></a>
               </div>
-              <div class="col-md-1">
+              <div class="col-md-1 col-xs-1">
                 <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile"><i class="fa fa-linkedin-square fa-3x"></i></a>
               </div>
-              <div class="col-md-1">
+              <div class="col-md-1 col-xs-1">
                 <a href="https://twitter.com/TK_CodeBear"><i class="fa fa-twitter fa-3x"></i></a>
               </div>
-              <div class="col-md-1">
+              <div class="col-md-1 col-xs-1">
                 <a href="https://medium.com/@TK_CodeBear"><i class="fa fa-medium fa-3x"></i></a>
               </div>
-              <div class="col-md-1">
+              <div class="col-md-1 col-xs-1">
                 <a href="http://www.quora.com/Todd-Kronenberg"><img class="icon" src="img/quora_icon.png" alt="quora"></a>
               </div>
-              <div class="col-md-1">
+              <div class="col-md-1 col-xs-1">
                 <a href="terminal/terminal.html"><img class="side-padding" src="img/terminal_icon.png" alt="terminal"></a>
               </div>
-              <div class="col-md-offset-2"></div>
+              <div class="col-md-offset-2 col-xs-offset-2"></div>
             </div>
           </div>
 
           <div class="row" id="hireMeRow">
             <button id="hireMe" data-toggle="modal" data-target="#hireMeModal">Hire Me</button>
 
+          <!-- Contact Form Modal -->
             <div class="modal fade" id='hireMeModal'>
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -61,14 +64,16 @@
                     <h4 class="modal-title">Contact Me</h4>
                   </div>
                   <div class="modal-body">
-                      <input type='email' class='form-control' ng-model='email' placeholder='Your Email' maxlength='50'><br>
-                      <input type='text' class='form-control' ng-model='name' placeholder='Your Name' maxlength='30'><br>
-                      <input type='text' class='form-control' ng-model='msgTitle' placeholder='Subject Title' maxlength='70'><br>
-                      <textarea class='form-control' rows='8' ng-model='msg' placeholder='Message'></textarea>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" ng-click='clearForm()' data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" ng-click='hireMe()'>Send Email</button>
+                    <form id='contact'>
+                      <input type='email' class='form-control' ng-model='email' placeholder='Your Email' maxlength='50' required><br>
+                      <input type='text' class='form-control' ng-model='name' placeholder='Your Name' maxlength='30' required><br>
+                      <input type='text' class='form-control' ng-model='msgTitle' placeholder='Subject Title' maxlength='70' required><br>
+                      <textarea class='form-control' rows='8' ng-model='msg' placeholder='Message' required></textarea>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" ng-click='clearForm()' data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" ng-click='hireMe()' data-dismiss='modal'>Send Email</button>
+                      </div>
+                    </form>
                   </div>
                 </div><!-- /.modal-content -->
               </div><!-- /.modal-dialog -->
@@ -87,8 +92,8 @@
         <!-- Portfolio -->
         <div ng-repeat='project in projects'>
           <div class='row'>
-            <div class="col-md-6">
-              <div class='row'>
+            <div class="col-md-6 col-xs-12">
+              <div class='row projectTitleRow'>
                 <div class='col-md-10 col-md-offset-1'>
                   <a href="{{project.url}}">
                     <h2 class="projectTitle">{{project.title}}</h2>
@@ -97,14 +102,14 @@
               </div>
               <div class='row'>
                 <div class='col-md-10 col-md-offset-1'>
-                  <h4> Description </h4>
+                  <!-- <h4> Description </h4> --><br>
                   <p class="projectDescription">
                     {{project.description}}
                   </p>
                 </div>
               </div>
               <div class='row'>
-                <div class='techs col-md-10 col-md-offset-1'>
+                <div class='techs col-md-10 col-md-offset-1 hidden-xs hidden-sm'>
                   <p class="projectTech" style='word-wrap: break-word;'>
                       <div style='display: inline;' ng-repeat='tech in project.techs' class='tags'>{{tech}}</div>
                   </p>
@@ -122,32 +127,30 @@
 
       <!-- Sigma Shoooter Portfolio Project -->
         <div class='row'>
-            <div class="col-md-6">
-              <div class='row'>
+            <div class="col-md-6 col-xs-12 col-sm-12">
+              <div class='row projectTitleRow'>
                 <div class='col-md-10 col-md-offset-1'>
-                  <!-- <span class='openVideo' data-toggle='modal' data-target='#sigmaShooterVideo'> -->
                     <h2 class="projectTitle openVideo" data-toggle='modal' data-target='#sigmaShooterVideo'> Sigma Shooter </h2>
-                  <!-- </span> -->
                 </div>
               </div>
               <div class='row'>
                 <div class='col-md-10 col-md-offset-1'>
-                  <h4> Description </h4>
+                  <!-- <h4> Description </h4> --><br>
                   <p class="projectDescription">
                     Console Shoot 'em Up game created as my final project in a college Assembly Language course. Written using the MASM Assembler in Visual Studio 2010.
                   </p>
                 </div>
               </div>
               <div class='row'>
-                <div class='techs col-md-10 col-md-offset-1'>
+                <div class='techs col-md-10 col-md-offset-1 hidden-xs hidden-sm'>
                   <p class="projectTech" style='word-wrap: break-word;'>
                       <div style='display: inline;' class='tags'>Assembly Language</div>
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 text-center">
-              <img class='projectPics' data-toggle='modal' data-target='#sigmaShooterVideo' src="img/SigmaShooter_screenShot.png">
+            <div class="col-md-6 col-xs-12 col-sm-12 text-center">
+              <img class='projectPics' width='300px' data-toggle='modal' data-target='#sigmaShooterVideo' src="img/SigmaShooter_screenShot.png">
             </div>
           </div>
           <hr>
@@ -156,23 +159,21 @@
       <!-- Hill Cipher Portfolio Project -->
         <div class='row'>
             <div class="col-md-6">
-              <div class='row'>
+              <div class='row projectTitleRow'>
                 <div class='col-md-10 col-md-offset-1'>
-                  <!-- <span class='openVideo' data-toggle='modal' data-target='#sigmaShooterVideo'> -->
                     <h2 class="projectTitle openVideo" data-toggle='modal' data-target='#hillCipherVideo'> Hill Cipher </h2>
-                  <!-- </span> -->
                 </div>
               </div>
               <div class='row'>
                 <div class='col-md-10 col-md-offset-1'>
-                  <h4> Description </h4>
+                  <!-- <h4> Description </h4> --><br>
                   <p class="projectDescription">
                     Written in C++ using the Linear Algebra-related cryptographic Hill Cipher. Plain text is converted into a matrix, then encrypted using a randomly generated 3x3 matrix. The decryption involves calculating the inverse of the encryption matrix and applying it to the cipher text.
                   </p>
                 </div>
               </div>
               <div class='row'>
-                <div class='techs col-md-10 col-md-offset-1'>
+                <div class='techs col-md-10 col-md-offset-1 hidden-xs hidden-sm'>
                   <p class="projectTech" style='word-wrap: break-word;'>
                       <div style='display: inline;' class='tags'>C++</div>
                   </p>

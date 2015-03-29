@@ -1,0 +1,225 @@
+/* Style for visual version of the website */
+
+body {
+  overflow-x: hidden;
+}
+
+body * {
+  border: 1px solid red;
+}
+
+header {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-size: 6em;
+  font-weight: bold;
+  font-family: 'Play', sans-serif;
+  color: black;
+}
+
+section {
+  margin-top: 5em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 1em;
+  font-size: 6em;
+}
+
+h1, h2 {
+  font-family: 'Play', sans-serif;
+  color: black;
+}
+
+i {
+  color: #000;
+}
+
+hr { 
+  width: 94%;
+  border-width: 2px;
+  border-style: solid;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+.container-fluid {
+  overflow-x: hidden;
+}
+
+.fa .fa-linkedin-square .fa-3x {
+  margin: 0;
+}
+
+.icons {
+  background-color: rgba(255,255,255,0.3);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+}
+
+.projectTitle {
+  text-align: center;
+}
+
+.projectTitleRow {
+  background-color: black;
+}
+
+.projectTitleRow * {
+  color: white;
+  font-size: 1.5em;
+}
+
+.projectPics {
+  /*max-height: 200px;*/
+  max-width: 400px;
+  /*min-height: 200px;*/
+}
+
+.projectPics:hover {
+  cursor: pointer;
+}
+
+.inline {
+  display: inline;
+}
+
+.no-padding-margin {
+  margin: 0;
+  padding: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.tags {
+  background-color: green;
+  border-radius: 10px;
+  color: white;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-right: 1em;
+}
+
+.center {
+  text-align: center;
+}
+
+.video {
+  display: fixed;
+  /*height: 600px;*/
+  /*width: 800px;*/
+}
+
+.openVideo:hover {
+  cursor: pointer;
+}
+
+#mainDisplay {
+  background: url('../img/theKnobAT.JPG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#stickyDiv.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+#portfolio img {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 8.5em;
+}
+
+#aboutMe {
+  font-size: 1.3em;
+}
+
+#hireMeRow {
+  text-align: center;
+  background-color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#hireMe {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.5em;
+  outline: none;
+}
+
+#hireMe:hover {
+  background: #fff;
+  color: #000;
+}
+
+#aboutMeTitle {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: white;
+}
+
+#aboutMeSection {
+  margin-bottom: 6em;
+  background-color: black;
+  color: white;
+  padding: 2em 0 4em 0;
+}
+
+@-webkit-keyframes throb {
+  0%, 100% {
+    text-shadow: 0;
+  }
+  50% {
+    text-shadow: 0px 0px 2px black;
+  }
+}
+
+keyframes throb {
+  0%, 100% {
+    text-shadow: 0;
+  }
+  50% {
+    text-shadow: 0px 0px 2px black;
+  }
+}
+
+.throb {
+  -webkit-animation-name: throb;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: throb;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}

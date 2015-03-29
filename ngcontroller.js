@@ -33,53 +33,34 @@ angular.module('krone', [])
   }
 
   $scope.hireMe = function() {
-    // var email = {
-    //   key: 'Ds4ZZAGuZEOplfx2G54uAg',
-    //   message: {
-    //     html: '<p> Example HTML content </p>',
-    //     text: $scope.msg,
-    //     subject: $scope.msgTitle,
-    //     from_email: $scope.email,
-    //     from_name: $scope.name,
-    //     to: [{
-    //       email: 'toddkronenberg@gmail.com',
-    //       name: 'Todd Kronenberg',
-    //       type: 'to'
-    //     }]
-    //   }
-    // };
-    console.log($scope.msg);
-    console.log($scope.msgTitle);
-    console.log($scope.email);
-    console.log($scope.name);
     var email = {
-      key: 'Ds4ZZAGuZEOplfx2G54uAg',
+      key: 'Ds4ZZAguZEOpIfx2G54uAg',
       message: {
-        from_email: '$scope.email',
+        html: '<p>' + $scope.msg + ' </p>',
+        text: $scope.msg,
+        subject: $scope.msgTitle,
+        from_email: $scope.email,
+        from_name: $scope.name,
         to: [{
           email: 'toddkronenberg@gmail.com',
+          name: 'Todd Kronenberg',
           type: 'to'
-        }],
-        autotext: 'true',
-        html: '<p> Example HTML content </p>'
+        }]
       }
-    }
+    };
 
-    // $.ajax({
-    //   type: "POST",
-    //   url: "https://mandrillapp.com/api/1.0/messages/send.json",
-    //   data: email,
-    //   success: function(msg){
-    //     alert('email sent', msg);
-    //   }, error: function(XMLHttpRequest, textStatus, errorThrown) {
-    //     alert('error sending email');
-    //   }
-    // });
-
-    $http.post('https://mandrillapp.com/api/1.0/messages/send.json', {data: email}).success(function(msg) {
-      alert('email sent', msg);
+    $http.post('https://mandrillapp.com/api/1.0/messages/send.json', email).success(function(msg) {
+      $scope.email = '';
+      $scope.name = '';
+      $scope.msgTitle = '';
+      $scope.msg = '';
     }).error(function(msg) {
-      alert('error sending email', msg);
+      $scope.email = '';
+      $scope.name = '';
+      $scope.msgTitle = '';
+      $scope.msg = '';
+      // console.log('error', msg);
+      alert('error sending the email');
     });
   };
 
