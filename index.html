@@ -190,11 +190,19 @@
       </section>
 
       <section id='aboutMeSection' class='row text-center'>
-          <h1 id='aboutMeTitle'> About Me </h1>
-          <div class='col-md-8 col-md-offset-2'>
-            <p id='aboutMe' class='text-left'>
-              I love to code and build fun things on the web. Node.js and Angular are my tools of choice. I've studied Computer Science at university and web development at Coding House bootcamp. After working as a Teaching Assistant at Coding House this year I now am on the hunt for web development positions in the Bay Area. I believe in the ancient Vim gods and know that they will help my code in its quest to conquer machines for all mankind.
+          <h1 id='aboutMeTitle text-center'> About Me </h1>
+          <div class='col-md-5 col-md-offset-1 text-left row'>
+            <p id='aboutMe'>
+              I am a Software Developer in the San Franscisco Bay Area. I love to code in Vim and build fun things on the web. Node.js and Angular are my tools of choice, but I'm always looking to learn new tools. I've studied Computer Science at university and web development at Coding House bootcamp. After working as a Teaching Assistant at Coding House this year I am now looking for web development positions in the Bay Area building web or hybrid-mobile apps. I enjoy building full-stack single-page applications with RESTful APIs.
             </p>
+            <div class='row text-center'>
+              <a id='resume' href='my_resume.psd' download='Todd_Kronenberg_Resume.psd'> Download Resume</a>
+            </div>
+          </div>
+          <div class='col-md-6'>
+            <ul>
+              <li ng-repeat='logo in logos' class='col-md-3'> <img class='logos' src='{{logo}}'> </li>
+            </ul>
           </div>
       </section>
 

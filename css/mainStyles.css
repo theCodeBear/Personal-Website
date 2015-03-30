@@ -47,6 +47,12 @@ hr {
   border-style: solid;
 }
 
+li {
+  list-style-type: none;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 footer {
   margin-top: 2em;
 }
@@ -115,6 +121,11 @@ footer {
   cursor: pointer;
 }
 
+.logos {
+  max-width: 100px;
+  max-height: 100px;
+}
+
 #mainDisplay {
   background: url('../img/theKnobAT.JPG') no-repeat center center fixed;
   background-size: cover;
@@ -139,10 +150,6 @@ footer {
   margin-bottom: 8.5em;
 }
 
-#aboutMe {
-  font-size: 1.3em;
-}
-
 #hireMeRow {
   text-align: center;
   background-color: black;
@@ -165,17 +172,37 @@ footer {
   color: #000;
 }
 
+#aboutMe {
+  font-size: 1.3em;
+  padding-bottom: 2em;
+}
+
 #aboutMeTitle {
   margin-top: 1em;
   margin-bottom: 1em;
-  color: white;
+  color: black;
 }
 
 #aboutMeSection {
   margin-bottom: 6em;
-  background-color: black;
-  color: white;
+  background-color: turquoise;
+  color: black;
   padding: 2em 0 4em 0;
+}
+
+#resume {
+  border: 2px solid white;
+  color: white;
+  padding: 1em 2em 1em 2em;
+  margin-top: 3em;
+  border-radius: 15px;
+  font-size: 1.4em;
+}
+
+#resume:hover {
+  border: 2px solid turquoise;
+  background-color: white;
+  color: turquoise;
 }
 
 @-webkit-keyframes throb {

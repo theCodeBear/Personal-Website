@@ -2,7 +2,7 @@ angular.module('krone', [])
 
 .controller('main', ['$scope', '$http', function($scope, $http) {
   $scope.projects = [
-      {
+    {
       title: 'Eddie Exchange',
       url: 'https://eddie-exchange.herokuapp.com',
       description: 'This online marketplace for trading items between users was created by myself and a student at Coding House through pair-programming. Built in Hapi.js and Angular, trades are made through the website and users are notified by email through the use of the Mandrill API.',
@@ -25,6 +25,19 @@ angular.module('krone', [])
     }
   ];
 
+  $scope.logos = [
+    'img/html5-logo.png',
+    'img/css3-logo.png',
+    'img/js-logo.png',
+    'img/bootstrap-logo.png',
+    'img/jquery-logo.png',
+    'img/node-logo.png',
+    'img/angular-logo.png',
+    'img/hapi-logo.png',
+    'img/mongo-db-logo.png',
+    'img/vim-logo.png'
+  ];
+
   $scope.clearForm = function() {
     $scope.email = '';
     $scope.name = '';
@@ -38,7 +51,7 @@ angular.module('krone', [])
       message: {
         html: '<p>' + $scope.msg + ' </p>',
         text: $scope.msg,
-        subject: $scope.msgTitle,
+        subject: "Todd's Website: " + $scope.msgTitle,
         from_email: $scope.email,
         from_name: $scope.name,
         to: [{
