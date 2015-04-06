@@ -8,9 +8,8 @@ header {
   margin-top: 1em;
   margin-bottom: 2em;
   font-size: 6em;
-  font-weight: bold;
-  font-family: 'Play', sans-serif;
-  color: black;
+  font-weight: 100;
+  color: white;
 }
 
 section {
@@ -33,7 +32,6 @@ h1 {
 }
 
 h1, h2 {
-  font-family: 'Play', sans-serif;
   color: black;
 }
 
@@ -41,16 +39,14 @@ i {
   color: #000;
 }
 
-hr { 
-  width: 94%;
-  border-width: 2px;
-  border-style: solid;
-}
-
 li {
   list-style-type: none;
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.blackOverlay {
+  background-color: rgba(0,0,0,0.4);
 }
 
 footer {
@@ -74,6 +70,15 @@ footer {
 .icon {
   width: 42px;
   height: 42px;
+}
+
+.project {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.project: hover {
+  box-shadow: 0 0 18px 0 rgba(0,0,0,0.8);
 }
 
 .projectPics {
@@ -129,6 +134,8 @@ footer {
 #mainDisplay {
   background: url('../img/theKnobAT.JPG') no-repeat center center fixed;
   background-size: cover;
+  /* filter: grayscale(20%); */
+  /* -webkit-filter: grayscale(20%); */
 }
 
 #stickyDiv.sticky {
