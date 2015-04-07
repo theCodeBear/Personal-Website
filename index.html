@@ -16,12 +16,12 @@
   <body ng-app='krone' ng-controller='main'>
     <div class="container-fluid">
       <div class="row" id="mainDisplay">
-        <div class="row">
+        <div class="row blackOverlayTop">
           <header class="text-center"> Todd Kronenberg </header>
         </div>
 
         <div id='replacementSpace'></div>
-        <div class="row jobTitle">
+        <div class="row jobTitle blackOverlayBottom">
           <div class="col-md-6 col-md-offset-3" style="padding: 0;">
             <div class="col-md-12 no-padding-margin" style="text-align: right;">
               <h2 class="inline-block throb" id='title'> Full Stack Web Developer </h2>
@@ -93,8 +93,8 @@
         </div>
 
         <!-- Portfolio -->
-        <div ng-repeat='project in projects'>
-          <div class='row'>
+        <div ng-repeat='project in projects' ng-cloak>
+          <div class='row project'>
             <div class="col-md-6 col-xs-12">
               <div class='row projectTitleRow'>
                 <div class='col-md-10 col-md-offset-1'>
@@ -129,7 +129,7 @@
         </div>
 
       <!-- Sigma Shoooter Portfolio Project -->
-        <div class='row'>
+        <div class='row project'>
             <div class="col-md-6 col-xs-12 col-sm-12">
               <div class='row projectTitleRow'>
                 <div class='col-md-10 col-md-offset-1'>
@@ -160,7 +160,7 @@
         <!-- </div> -->
 
       <!-- Hill Cipher Portfolio Project -->
-        <div class='row'>
+        <div class='row project'>
             <div class="col-md-6">
               <div class='row projectTitleRow'>
                 <div class='col-md-10 col-md-offset-1'>

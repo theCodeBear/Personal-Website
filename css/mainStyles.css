@@ -45,8 +45,14 @@ li {
   padding-bottom: 2px;
 }
 
-.blackOverlay {
-  background-color: rgba(0,0,0,0.4);
+.blackOverlayTop {
+  background: linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
+  background: -webkit-linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.blackOverlayBottom {
+  background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 footer {
@@ -62,7 +68,7 @@ footer {
 }
 
 .icons {
-  background-color: rgba(255,255,255,0.3);
+  background-color: white;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -72,12 +78,21 @@ footer {
   height: 42px;
 }
 
+.whiteColor {
+  color: white;
+  display: none;
+}
+
+.whiteColor:hover {
+  color: white;
+}
+
 .project {
   padding-top: 2em;
   padding-bottom: 2em;
 }
 
-.project: hover {
+.project:hover {
   box-shadow: 0 0 18px 0 rgba(0,0,0,0.8);
 }
 
@@ -155,6 +170,8 @@ footer {
   text-align: center;
   margin: 0;
   margin-bottom: 8.5em;
+  color: white;
+  font-weight: 100;
 }
 
 #hireMeRow {
@@ -177,6 +194,10 @@ footer {
 #hireMe:hover {
   background: #fff;
   color: #000;
+}
+
+#hillCipherProj {
+  margin-bottom: 18px;
 }
 
 #aboutMe {
@@ -207,34 +228,7 @@ footer {
 }
 
 #resume:hover {
-  border: 2px solid turquoise;
+  border: 2px solid white;
   background-color: white;
   color: turquoise;
-}
-
-@-webkit-keyframes throb {
-  0%, 100% {
-    text-shadow: 0;
-  }
-  50% {
-    text-shadow: 0px 0px 2px black;
-  }
-}
-
-keyframes throb {
-  0%, 100% {
-    text-shadow: 0;
-  }
-  50% {
-    text-shadow: 0px 0px 2px black;
-  }
-}
-
-.throb {
-  -webkit-animation-name: throb;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: throb;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
 }
