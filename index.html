@@ -8,9 +8,10 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'> -->
-    <link rel="stylesheet" media="screen and (min-width: 750px)" href="css/mainStyles.css">
+    <!-- css for non-mobile devices -->
+    <link rel="stylesheet" media="only screen and (min-device-width: 750px)" href="css/mainStyles.css">
     <!-- css for mobile-sized devices -->
-    <link rel="stylesheet" media='screen and (max-width: 749px)' href="css/mobileStyles.css">
+    <link rel="stylesheet" media='only screen and (max-device-width: 749px)' href="css/mobileStyles.css">
     <script src='bower_components/angular/angular.min.js'></script>
   </head>
   <body ng-app='krone' ng-controller='main'>
@@ -24,7 +25,7 @@
         <div class="row jobTitle blackOverlayBottom">
           <div class="col-md-6 col-md-offset-3" style="padding: 0;">
             <div class="col-md-12 no-padding-margin" style="text-align: right;">
-              <h2 class="inline-block throb" id='title'> Full Stack Web Developer </h2>
+              <h2 class="inline-block" id='title'> Full Stack Web Developer </h2>
             </div>
           </div>
         </div>
@@ -57,7 +58,7 @@
           <div id='stickyDiv'>
             <div class="row" id="hireMeRow">
               <div class="col-md-12 col-xs-12 text-center">
-                <div class="col-md-1 col-md-offset-2 col-xs-1 col-xs-offset-3">
+                <div class="col-md-1 col-md-offset-2 col-xs-1 col-xs-offset-2">
                   <a href="https://github.com/theCodeBear"<i class="fa fa-github fa-3x whiteColor"></i></a>
                 </div>
                 <div class="col-md-1 col-xs-1">
@@ -67,7 +68,7 @@
                   <a href="https://twitter.com/TK_CodeBear"><i class="fa fa-twitter fa-3x whiteColor"></i></a>
                 </div>
 
-                <button id="hireMe" class='col-md-2' data-toggle="modal" data-target="#hireMeModal">Hire Me</button>
+                <button id="hireMe" class='col-md-2 col-xs-2' data-toggle="modal" data-target="#hireMeModal">Hire Me</button>
 
                 <div class="col-md-1 col-xs-1">
                   <a href="https://medium.com/@TK_CodeBear"><i class="fa fa-medium fa-3x whiteColor"></i></a>
@@ -130,7 +131,7 @@
               <div class='row'>
                 <div class='col-md-10 col-md-offset-1'>
                   <!-- <h4> Description </h4> --><br>
-                  <p class="projectDescription">
+                  <p class="projectDescription col-xs-10 col-xs-offset-1">
                     {{project.description}}
                   </p>
                 </div>
@@ -153,7 +154,7 @@
 
       <!-- Sigma Shoooter Portfolio Project -->
         <div class='row project'>
-            <div class="col-md-6 col-xs-12 col-sm-12">
+            <div class="col-md-6">
               <div class='row projectTitleRow'>
                 <div class='col-md-10 col-md-offset-1'>
                     <h2 class="projectTitle openVideo" data-toggle='modal' data-target='#sigmaShooterVideo'> Sigma Shooter </h2>
@@ -162,7 +163,7 @@
               <div class='row'>
                 <div class='col-md-10 col-md-offset-1'>
                   <!-- <h4> Description </h4> --><br>
-                  <p class="projectDescription">
+                  <p class="projectDescription col-xs-10 col-xs-offset-1">
                     Console Shoot 'em Up game created as my final project in a college Assembly Language course. Written using the MASM Assembler in Visual Studio 2010.
                   </p>
                 </div>
@@ -175,8 +176,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-xs-12 col-sm-12 text-center">
-              <img class='projectPics' width='300px' data-toggle='modal' data-target='#sigmaShooterVideo' src="img/SigmaShooter_screenShot.png">
+            <div class="col-md-6 text-center">
+              <img class='projectPics manualPics' data-toggle='modal' data-target='#sigmaShooterVideo' src="img/SigmaShooter_screenShot.png">
             </div>
           </div>
         <!-- </div> -->
@@ -192,7 +193,7 @@
               <div class='row'>
                 <div class='col-md-10 col-md-offset-1'>
                   <!-- <h4> Description </h4> --><br>
-                  <p class="projectDescription">
+                  <p class="projectDescription col-xs-10 col-xs-offset-1">
                     Written in C++ using the Linear Algebra-related cryptographic Hill Cipher. Plain text is converted into a matrix, then encrypted using a randomly generated 3x3 matrix. The decryption involves calculating the inverse of the encryption matrix and applying it to the cipher text.
                   </p>
                 </div>
@@ -206,7 +207,7 @@
               </div>
             </div>
             <div class="col-md-6 text-center">
-                <img class='projectPics' data-toggle='modal' data-target='#hillCipherVideo' src="img/hillCipher.png">
+                <img class='projectPics manualPics' data-toggle='modal' data-target='#hillCipherVideo' src="img/hillCipher.png">
             </div>
           </div>
         <!-- </div> -->
@@ -216,16 +217,22 @@
       <section id='aboutMeSection' class='row text-center'>
           <h1 id='aboutMeTitle text-center'> About Me </h1>
           <div class='col-md-5 col-md-offset-1 text-left row'>
-            <p id='aboutMe'>
+            <p id='aboutMe' class='col-xs-10 col-xs-offset-1'>
               I am a Software Developer in the San Franscisco Bay Area. I love to code in Vim and build fun things on the web. Node.js and Angular are my tools of choice, but I'm always looking to learn new tools. I've studied Computer Science at university and web development at Coding House bootcamp. After working as a Teaching Assistant at Coding House this year I am now looking for web development positions in the Bay Area building web or hybrid-mobile apps. I enjoy building full-stack single-page applications with RESTful APIs.
             </p>
             <div class='row text-center'>
               <a id='resume' href='todd_kronenberg_resume.pdf.zip' download='Todd_Kronenberg_Resume.pdf.zip'> Download Resume</a>
             </div>
           </div>
-          <div class='col-md-6'>
+          <div id='logoList' class='col-md-6'>
             <ul>
-              <li ng-repeat='logo in logos' class='col-md-3'> <img class='logos' src='{{logo}}'> </li>
+              <li ng-repeat='logo in logos' class='col-md-3 col-xs-3'> <img class='logos' src='{{logo}}'> </li>
+              <li class='col-md-3 col-xs-3'>
+                <img id='mongoLogo' class='logos' src='img/mongo-db-logo.png'>
+              </li>
+              <li class='col-md-3 col-xs-3'>
+                <img id='vimLogo' class='logos' src='img/vim-logo.png'>
+              </li>
             </ul>
           </div>
       </section>
@@ -237,7 +244,7 @@
 
 
       <footer>
-        <p class='text-center'> Bay Area, CA <br> - March 2015 - </p>
+        <p class='text-center'> Bay Area, CA <br> - April 2015 - </p>
       </footer>
 
       <!-- MODAL FOR SIGMA SHOOTER -->

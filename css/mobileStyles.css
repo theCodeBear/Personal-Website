@@ -1,4 +1,4 @@
-/* Style for visual version of the website */
+/* Style for mobile version of the website */
 
 body {
   overflow-x: hidden;
@@ -11,10 +11,9 @@ body * {
 header {
   margin-top: 1em;
   margin-bottom: 2em;
-  font-size: 6em;
-  font-weight: bold;
-  font-family: 'Play', sans-serif;
-  color: black;
+  font-size: 10em;
+  font-weight: 100;
+  color: white;
 }
 
 section {
@@ -26,11 +25,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
-  color: black;
-}
-
 h1 {
   font-weight: bold;
   margin-bottom: 1em;
@@ -38,7 +32,6 @@ h1 {
 }
 
 h1, h2 {
-  font-family: 'Play', sans-serif;
   color: black;
 }
 
@@ -46,10 +39,20 @@ i {
   color: #000;
 }
 
-hr { 
-  width: 94%;
-  border-width: 2px;
-  border-style: solid;
+li {
+  list-style-type: none;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.blackOverlayTop {
+  background: linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
+  background: -webkit-linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.blackOverlayBottom {
+  background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  background: -webkit-linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 footer {
@@ -75,8 +78,18 @@ footer {
   height: 42px;
 }
 
+.whiteColor {
+  color: white;
+  display: none;
+}
+
 .projectTitle {
   text-align: center;
+}
+
+.projectDescription {
+  margin-top: 1em;
+  font-size: 2em;
 }
 
 .projectTitleRow {
@@ -85,18 +98,24 @@ footer {
 
 .projectTitleRow * {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .projectPics {
   /*max-height: 200px;*/
-  max-width: 400px;
+  max-width: 100%;
   /*min-height: 200px;*/
+  margin-bottom: 5em;
+  margin-top: 5em;
 }
 
-.projectPics:hover {
-  cursor: pointer;
+.manualPics {
+  width: 80%;
 }
+
+/* .projectPics:hover { */
+/*   cursor: pointer; */
+/* } */
 
 .inline {
   display: inline;
@@ -134,6 +153,26 @@ footer {
   cursor: pointer;
 }
 
+#logoList {
+  margin-top: 15em;
+}
+
+.logos {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Gotta do some hackery stuff to the Vim and Mongo logos too look right on mobile */
+#vimLogo {
+  min-width: 98%;
+  margin-top: -15em;
+}
+
+#mongoLogo {
+  margin-left: -65em;
+}
+
 #mainDisplay {
   background: url('../img/theKnobAT.JPG') no-repeat center center fixed;
   background-size: cover;
@@ -156,10 +195,14 @@ footer {
   text-align: center;
   margin: 0;
   margin-bottom: 8.5em;
+  font-weight: 100;
+  font-size: 5em;
+  color: white;
 }
 
 #aboutMe {
   font-size: 1.3em;
+  margin-bottom: 4em;
 }
 
 #hireMeRow {
@@ -192,34 +235,52 @@ footer {
 
 #aboutMeSection {
   margin-bottom: 6em;
-  background-color: black;
-  color: white;
+  background-color: turquoise;
+  color: black;
   padding: 2em 0 4em 0;
 }
 
-@-webkit-keyframes throb {
-  0%, 100% {
-    text-shadow: 0;
-  }
-  50% {
-    text-shadow: 0px 0px 2px black;
-  }
+#resume {
+  border: 2px solid white;
+  color: turquoise;
+  padding: 1em 2em 1em 2em;
+  margin-top: 3em;
+  margin-bottom: 5em;
+  border-radius: 15px;
+  font-size: 1.4em;
+  background-color: white
 }
 
-keyframes throb {
-  0%, 100% {
-    text-shadow: 0;
-  }
-  50% {
-    text-shadow: 0px 0px 2px black;
-  }
-}
+/* #resume:hover { */
+/*   border: 2px solid white; */
+/*   background-color: white; */
+/*   color: turquoise; */
+/* } */
 
-.throb {
-  -webkit-animation-name: throb;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: throb;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
+
+/* @-webkit-keyframes throb { */
+/*   0%, 100% { */
+/*     text-shadow: 0; */
+/*   } */
+/*   50% { */
+/*     text-shadow: 0px 0px 2px black; */
+/*   } */
+/* } */
+
+/* keyframes throb { */
+/*   0%, 100% { */
+/*     text-shadow: 0; */
+/*   } */
+/*   50% { */
+/*     text-shadow: 0px 0px 2px black; */
+/*   } */
+/* } */
+
+/* .throb { */
+/*   -webkit-animation-name: throb; */
+/*   -webkit-animation-duration: 3s; */
+/*   -webkit-animation-iteration-count: infinite; */
+/*   animation-name: throb; */
+/*   animation-duration: 3s; */
+/*   animation-iteration-count: infinite; */
+/* } */

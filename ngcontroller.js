@@ -33,9 +33,9 @@ angular.module('krone', [])
     'img/jquery-logo.png',
     'img/node-logo.png',
     'img/angular-logo.png',
-    'img/hapi-logo.png',
-    'img/mongo-db-logo.png',
-    'img/vim-logo.png'
+    'img/hapi-logo.png'
+    // 'img/mongo-db-logo.png',
+    // 'img/vim-logo.png'
   ];
 
   $scope.clearForm = function() {
