@@ -12,7 +12,7 @@ angular.module('krone', [])
     {
       title: "Kid Math",
       url: "https://morning-eyrie-5597.herokuapp.com",
-      description: "Basic math app for children to learn arithmetic. Currently only basic functionality. Note: view in 'device mode' as the app is styled for mobile devices.",
+      description: "Basic math app for children to learn arithmetic. Currently only basic functionality. Note: if on your computer, view in 'device mode' as the app is designed for mobile devices only.",
       picture: "img/KidMath_pic.png",
       techs: ["JavaScript", "Angular"]
     },

@@ -68,14 +68,64 @@ footer {
 }
 
 .icons {
-  background-color: rgba(255,255,255,0.3);
+  /* background-color: rgba(255,255,255,0.3); */
+  background-color: white;
   padding-top: 1em;
   padding-bottom: 1em;
+  font-size: 2em;
 }
 
 .icon {
-  width: 42px;
-  height: 42px;
+  width: 84px;
+  height: 84px;
+}
+
+
+/* General Modal Stuff */
+.modal-header button {
+  font-size: 5em;
+}
+
+.modal-dialog {
+  width: 90%;
+}
+
+.modal-title {
+  font-size: 5em;
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.modal-footer button {
+  font-size: 5em;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+
+/* Modal stuff for projects */
+.modal-header h2 {
+  font-size: 4em;
+}
+
+#sigmaShooterVideo {
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+.modal-body input, .modal-body textarea {
+  font-size: 4em;
+  height: 400%;
 }
 
 .whiteColor {
@@ -149,9 +199,9 @@ footer {
   /*width: 800px;*/
 }
 
-.openVideo:hover {
-  cursor: pointer;
-}
+/* .openVideo:hover { */
+/*   cursor: pointer; */
+/* } */
 
 #logoList {
   margin-top: 15em;
@@ -218,14 +268,14 @@ footer {
   padding: 10px 20px;
   border-radius: 5px;
   color: #fff;
-  font-size: 1.5em;
+  font-size: 5em;
   outline: none;
 }
 
-#hireMe:hover {
-  background: #fff;
-  color: #000;
-}
+/* #hireMe:hover { */
+/*   background: #fff; */
+/*   color: #000; */
+/* } */
 
 #aboutMeTitle {
   margin-top: 1em;
