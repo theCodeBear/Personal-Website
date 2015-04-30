@@ -7,28 +7,28 @@ angular.module('krone', [])
       url: '#',
       description: 'Work in progress. A hybrid-mobile dating app built with the Ionic framework, in which users can drop pick up lines in their geographical spot and any other app users find these pick up lines and can respond to them, users then match to each other.',
       picture: 'img/pickup_screenshot.png',
-      techs: ['Ionic', 'Angular', 'ngCordova', 'JavaScript']
+      techs: ['Ionic', 'Angular', 'ngCordova', 'JavaScript', 'Firebase']
     },
     {
       title: 'blip',
       url: '#',
       description: 'Work in progress. A hybrid-mobile app for realtime social discovery of local hotspots. Users drop blips on a map and can view blips from all other users. Blips display on the map with short description of what is happening. Users can see where people are socializing on the map and see a stream of their comments.',
       picture: 'img/blip_screenshot.jpg',
-      techs: ['Ionic', 'Angular', 'ngCordova', 'JavaScript']
+      techs: ['Ionic', 'Angular', 'ngCordova', 'JavaScript', 'Firebase']
     },
     {
       title: 'CyCard',
       url: '#',
       description: 'Work in progress. A hybrid-mobile app for creating and exchanging digital business cards with professional contacts.',
       picture: 'img/cycard_screenshot.png',
-      techs: ['Ionic', 'Angular', 'JavaScript']
+      techs: ['Ionic', 'Angular', 'JavaScript', 'Parse']
     },
     {
       title: 'Eddie Exchange',
       url: 'https://eddie-exchange.herokuapp.com',
       description: 'This online marketplace for trading items between users was created by myself and a student at Coding House through pair-programming. Built in Hapi.js and Angular, trades are made through the website and users are notified by email through the use of the Mandrill API.',
       picture: 'img/Eddie-Exchange-pic.png',
-      techs: ['Jade', 'Angular', 'Hapi.js', 'Mongoose', 'Mandrill']
+      techs: ['Jade', 'Angular', 'Hapi.js', 'MongoDB', 'Mandrill']
     },
     {
       title: "Kid Math",
