@@ -1,17 +1,37 @@
-$(function() {
-  var $window = $(window);
-  var $stickyEl = $('#stickyDiv');
-  var elTop = $stickyEl.offset().top;
+angular.module('krone', ['ui.router'])
 
-  $window.scroll(function() {
-    $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
-    if ($window.scrollTop() > elTop) {
-      $('#replacementSpace').css('height', $('#stickyDiv').height());
-      $('.whiteColor').css('display', 'initial');
-    }
-    if ($window.scrollTop() < elTop) {
-      $('#replacementSpace').css('height', '0');
-      $('.whiteColor').css('display', 'none');
-    }
+.config(function($stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise('/');
+
+  $stateProvider
+
+  .state('portfolio', {
+    url: '/',
+    templateUrl: 'views/portfolio.html',
+    controller: 'PortfolioCtrl'
+  })
+
+  .state('contact', {
+    url: '/contact',
+    templateUrl: 'views/contact.html',
+    controller: 'ContactCtrl'
+  })
+
+  .state('experience', {
+    url: '/experience',
+    templateUrl: 'views/experience.html',
+    controller: 'ExperienceCtrl'
+  })
+
+  .state('terminal', {
+    url: '/terminal',
+    templateUrl: 'views/terminal.html'
+  })
+
+  .state('about', {
+    url: '/about',
+    templateUrl: 'views/about.html'
   });
+
 });

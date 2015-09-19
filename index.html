@@ -1,303 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Todd Kronenberg</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Todd Kronenberg</title>
     <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
     <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.min.css'>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
-    <!-- <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'> -->
     <!-- css for non-mobile devices -->
-    <link rel="stylesheet" media="only screen and (min-device-width: 750px)" href="css/mainStyles.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 750px)" href="css/redesign.css">
     <!-- css for mobile-sized devices -->
     <link rel="stylesheet" media='only screen and (max-device-width: 749px)' href="css/mobileStyles.css">
+    <!-- terminal styles -->
+    <link rel="stylesheet" href="../css/terminalStyles.css">
+    <script src='bower_components/jquery/dist/jquery.min.js'></script>
     <script src='bower_components/angular/angular.min.js'></script>
-  </head>
-  <body ng-app='krone' ng-controller='main'>
-    <div class="container-fluid">
-      <div class="row" id="mainDisplay">
-        <div class="row blackOverlayTop">
-          <header class="text-center"> Todd Kronenberg </header>
-        </div>
+</head>
+<body ng-app='krone'>
 
-        <div id='replacementSpace'></div>
-        <div class="row jobTitle blackOverlayBottom">
-          <div class="col-md-6 col-md-offset-3" style="padding: 0;">
-            <div class="col-md-12 no-padding-margin" style="text-align: right;">
-              <h2 class="inline-block" id='title'> Full Stack Web Developer </h2>
-            </div>
-          </div>
-        </div>
+  <header>
+    <ul>
+      <li> <a ui-sref='about'>About</a> </li>
+      <li> <a ui-sref='experience'>Experience</a> </li>
+      <li style='font-size: 1.25em;'> <a ui-sref='portfolio'>Portfolio</a> </li>
+      <li> <a ui-sref='terminal'>Terminal</a> </li>
+      <li> <a ui-sref='contact'>Contact</a> </li>
+    </ul>
+  </header>
 
 
-          <div class="row icons">
-            <div class="col-md-12 col-xs-12 text-center">
-              <div class="col-md-1 col-md-offset-3 col-xs-2">
-                <a href="https://github.com/theCodeBear"<i class="fa fa-github fa-3x"></i></a>
-              </div>
-              <div class="col-md-1 col-xs-2">
-                <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile"><i class="fa fa-linkedin-square fa-3x"></i></a>
-              </div>
-              <div class="col-md-1 col-xs-2">
-                <a href="https://twitter.com/TK_CodeBear"><i class="fa fa-twitter fa-3x"></i></a>
-              </div>
-              <div class="col-md-1 col-xs-2">
-                <a href="https://medium.com/@TK_CodeBear"><i class="fa fa-medium fa-3x"></i></a>
-              </div>
-              <div class="col-md-1 col-xs-2">
-                <a href="http://www.quora.com/Todd-Kronenberg"><img class="icon" src="img/quora_icon.png" alt="quora"></a>
-              </div>
-              <div class="col-md-1 col-xs-2">
-                <a href="terminal/terminal.html"><img class="icon" src="img/terminal_icon.png" alt="terminal"></a>
-              </div>
-            </div>
-          </div>
-
-          <div id='stickyDiv'>
-            <div class="row" id="hireMeRow">
-              <div class="col-md-12 col-xs-12 text-center">
-                <div class="col-md-1 col-md-offset-2 col-xs-1 col-xs-offset-2 hidden-sm hidden-xs">
-                  <a href="https://github.com/theCodeBear"<i class="fa fa-github fa-3x whiteColor"></i></a>
-                </div>
-                <div class="col-md-1 col-xs-1 hidden-sm hidden-xs">
-                  <a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile"><i class="fa fa-linkedin-square fa-3x whiteColor"></i></a>
-                </div>
-                <div class="col-md-1 col-xs-1 hidden-sm hidden-xs">
-                  <a href="https://twitter.com/TK_CodeBear"><i class="fa fa-twitter fa-3x whiteColor"></i></a>
-                </div>
-
-                <button id="hireMe" class='col-md-2 col-md-offset-0 col-xs-6 col-xs-offset-3' data-toggle="modal" data-target="#hireMeModal">Hire Me</button>
-
-                <div class="col-md-1 col-xs-1 hidden-sm hidden-xs">
-                  <a href="https://medium.com/@TK_CodeBear"><i class="fa fa-medium fa-3x whiteColor"></i></a>
-                </div>
-                <div class="col-md-1 col-xs-1 hidden-sm hidden-xs">
-                  <a href="http://www.quora.com/Todd-Kronenberg"><img class="icon whiteColor" src="img/quora_icon_white.png" alt="quora"></a>
-                </div>
-                <div class="col-md-1 col-xs-1 hidden-sm hidden-xs">
-                  <a href="terminal/terminal.html"><img class="side-padding whiteColor" src="img/terminal_icon_white.png" alt="terminal"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Contact Form Modal -->
-            <div class="modal fade" id='hireMeModal'>
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click='clearForm()'><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Contact Me</h4>
-                  </div>
-                  <div class="modal-body">
-                    <form id='contact'>
-                      <input type='email' class='form-control' ng-model='email' placeholder='Your Email' maxlength='50' required><br>
-                      <input type='text' class='form-control' ng-model='name' placeholder='Your Name' maxlength='30' required><br>
-                      <input type='text' class='form-control' ng-model='msgTitle' placeholder='Subject Title' maxlength='70' required><br>
-                      <textarea class='form-control' rows='8' ng-model='msg' placeholder='Message' required></textarea>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" ng-click='clearForm()' data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" ng-click='hireMe()' data-dismiss='modal'>Send Email</button>
-                      </div>
-                    </form>
-                  </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
-
-          <!-- </div> -->
-        </div>
-      <!-- </div> -->
+  <div class='title-display'>
+    <h1 class='name'> Todd Kronenberg </h1>
+    <h4 class='title'> Fullstack Web Developer </h4>
+  </div>
 
 
-      <section>
-        <div class='row text-center'>
-          <h1> Portfolio </h1>
-        </div>
-
-        <!-- Portfolio -->
-        <div ng-repeat='project in projects' ng-cloak>
-          <div class='row project'>
-            <div class="col-md-6 col-xs-12">
-              <div class='row projectTitleRow'>
-                <div class='col-md-10 col-md-offset-1'>
-                  <a href="{{project.url}}">
-                    <h2 class="projectTitle">{{project.title}}</h2>
-                  </a>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='col-md-10 col-md-offset-1'>
-                  <!-- <h4> Description </h4> --><br>
-                  <p class="projectDescription col-xs-10 col-xs-offset-1">
-                    {{project.description}}
-                  </p>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='techs col-md-10 col-md-offset-1 hidden-xs hidden-sm'>
-                  <p class="projectTech" style='word-wrap: break-word;'>
-                      <div style='display: inline;' ng-repeat='tech in project.techs' class='tags'>{{tech}}</div>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 text-center">
-              <a href="{{project.url}}">
-                <img class='projectPics' src="{{project.picture}}">
-              </a>
-            </div>
-          </div>
-        </div>
-
-      <!-- Sigma Shoooter Portfolio Project -->
-        <div class='row project'>
-            <div class="col-md-6">
-              <div class='row projectTitleRow'>
-                <div class='col-md-10 col-md-offset-1'>
-                    <h2 class="projectTitle openVideo" data-toggle='modal' data-target='#sigmaShooterVideo'> Sigma Shooter </h2>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='col-md-10 col-md-offset-1'>
-                  <!-- <h4> Description </h4> --><br>
-                  <p class="projectDescription col-xs-10 col-xs-offset-1">
-                    Console Shoot 'em Up game created as my final project in a college Assembly Language course. Written using the MASM Assembler in Visual Studio 2010.
-                  </p>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='techs col-md-10 col-md-offset-1 hidden-xs hidden-sm'>
-                  <p class="projectTech" style='word-wrap: break-word;'>
-                      <div style='display: inline;' class='tags'>Assembly Language</div>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 text-center">
-              <img class='projectPics manualPics' data-toggle='modal' data-target='#sigmaShooterVideo' src="img/SigmaShooter_screenShot.png">
-            </div>
-          </div>
-        <!-- </div> -->
-
-      <!-- Hill Cipher Portfolio Project -->
-        <div class='row project'>
-            <div class="col-md-6">
-              <div class='row projectTitleRow'>
-                <div class='col-md-10 col-md-offset-1'>
-                    <h2 class="projectTitle openVideo" data-toggle='modal' data-target='#hillCipherVideo'> Hill Cipher </h2>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='col-md-10 col-md-offset-1'>
-                  <!-- <h4> Description </h4> --><br>
-                  <p class="projectDescription col-xs-10 col-xs-offset-1">
-                    Written in C++ using the Linear Algebra-related cryptographic Hill Cipher. Plain text is converted into a matrix, then encrypted using a randomly generated 3x3 matrix. The decryption involves calculating the inverse of the encryption matrix and applying it to the cipher text.
-                  </p>
-                </div>
-              </div>
-              <div class='row'>
-                <div class='techs col-md-10 col-md-offset-1 hidden-xs hidden-sm'>
-                  <p class="projectTech" style='word-wrap: break-word;'>
-                      <div style='display: inline;' class='tags'>C++</div>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 text-center">
-                <img class='projectPics manualPics' data-toggle='modal' data-target='#hillCipherVideo' src="img/hillCipher.png">
-            </div>
-          </div>
-        <!-- </div> -->
-
-      </section>
-
-      <section id='aboutMeSection' class='row text-center'>
-          <h1 id='aboutMeTitle text-center'> About Me </h1>
-          <div class='col-md-5 col-md-offset-1 text-left row'>
-            <p id='aboutMe' class='col-xs-10 col-xs-offset-1'>
-              I am a Software Developer in the San Franscisco Bay Area. I love to code in Vim and build fun things on the web. Node.js and Angular are my tools of choice, but I'm always looking to learn new tools. I've studied Computer Science at university and web development at Coding House bootcamp. After working as a Teaching Assistant at Coding House this year I am now looking for web development positions in the Bay Area building web or hybrid-mobile apps. I enjoy building full-stack single-page applications with RESTful APIs.
-            </p>
-            <div class='row text-center'>
-              <a id='resume' href='todd_kronenberg_resume.pdf.zip' download='Todd_Kronenberg_Resume.pdf.zip'> Download Resume</a>
-            </div>
-          </div>
-          <div id='logoList' class='col-md-6'>
-            <ul>
-              <li ng-repeat='logo in logos' class='col-md-3 col-xs-3'> <img class='logos' src='{{logo}}'> </li>
-              <li class='col-md-3 col-xs-3'>
-                <img id='mongoLogo' class='logos' src='img/mongo-db-logo.png'>
-              </li>
-              <li class='col-md-3 col-xs-3'>
-                <img id='vimLogo' class='logos' src='img/vim-logo.png'>
-              </li>
-            </ul>
-          </div>
-      </section>
-
-      <section id='blogSection'>
-        <h1 class='text-center'> Recent Blog Posts </h1>
-        <script async src="https://static.medium.com/embed.js"></script><a class="m-profile" data-width='100%' href="https://medium.com/@TK_CodeBear">Todd Kronenberg</a>
-      </section>
+  <div ui-view></div>
 
 
-      <footer>
-        <p class='text-center'> Bay Area, CA <br> - April 2015 - </p>
-      </footer>
+  <footer>
+    <ul>
+      <li>
+        <a href='https://github.com/theCodeBear'><i class='fa fa-github'></i> Github</a>
+      </li>
+      <li>
+        <a href='https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile'><i class='fa fa-linkedin-square'></i> LinkedIn</a>
+      </li>
+      <li style='width: 200px'> <a href='todd_kronenberg_resume.pdf.zip' download='Todd_Kronenberg_Resume.pdf.zip'  >Download Resume</a> </li>
+      <li>
+        <a href='https://twitter.com/TK_CodeBear'><i class='fa fa-twitter'></i> Twitter</a>
+      </li>
+      <li>
+        <a href='https://medium.com/@TK_CodeBear'><i class='fa fa-medium'></i> Blog</a>
+      </li>
+    </ul>
+  </footer>
 
-      <!-- MODAL FOR SIGMA SHOOTER -->
-      <div class="modal fade" id='sigmaShooterVideo'>
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <div class='center'>
-                <h2><a href='https://github.com/theCodeBear/Sigma-Shooter'> <i class="fa fa-github"></i> View code on GitHub </a></h2>
-              </div>
-            </div>
-            <div class="modal-body">
-              <div class='center'>
-                <video class='video' width='498px' height='664px' controls>
-                  <source src="videos/SigmaShooter.mp4" type="video/mp4">
-                  Your browser does not support this video format.
-                </video>
-              </div>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
 
-      <!-- MODAL FOR HILL CIPHER -->
-      <div class="modal fade" id='hillCipherVideo'>
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <div class='center'>
-                <h2><a href='https://github.com/theCodeBear/Hill-Cipher'> <i class="fa fa-github"></i> View code on GitHub </a></h2>
-              </div>
-            </div>
-            <div class="modal-body">
-              <div class='center'>
-                <video class='video' width='702px' height='450px' controls>
-                  <source src="videos/hillCipher.mp4" type="video/mp4">
-                  Your browser does not support this video format.
-                </video>
-              </div>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+  <script src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+  <script src='bower_components/angular-ui-router/release/angular-ui-router.min.js'></script>
 
-    </div>
-
-      <script src='bower_components/jquery/dist/jquery.min.js'></script>
-      <script src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
-      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-      <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
-      <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
-      <script src='ngcontroller.js'></script>
-      <script src="index.js"></script>
-  </body>
+  <script src='index.js'></script>
+  <script src='controllers/contact.controller.js'></script>
+  <script src='controllers/portfolio.controller.js'></script>
+  <script src='controllers/experience.controller.js'></script>
+  <script src="terminal/commands.js"></script>
+  <script src="terminal/directoryStructure.js"></script>
+  <script src="terminal/terminal.js"></script>
+</body>
 </html>

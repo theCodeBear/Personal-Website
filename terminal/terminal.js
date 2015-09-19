@@ -31,12 +31,12 @@ $(function() {
     // call commands function to get actions to commands
       display = commands(input);//.toLowerCase());
     // display the results of the commands
-      $('body').append($('<div class="orange indent">'+display+'</div>'));
+      $('.terminal-body').append($('<div class="orange indent">'+display+'</div>'));
     // make the textbox readonly since the user has already pressed enter on it
       $('input').last().prop('readonly', true);
     // create the next command line prompt and put focus on its textbox
       if (commandPrompt2 !== "") commandPrompt2 = currentDirectory[currentDirectory.length-1];
-      $('body').append($('<div>' + commandPrompt + commandPrompt2 + commandPrompt3 + '<input type="textbox" name="cli" id="cli" ></div>'));
+      $('.terminal-body').append($('<div>' + commandPrompt + commandPrompt2 + commandPrompt3 + '<input class="terminal-input" type="textbox" name="cli" id="cli" ></div>'));
       $('input').last().focus();
     // set commandHistoryIndex to end of commandHistory array for use on next prompt
       commandHistoryIndex = commandHistory.length;
@@ -69,10 +69,10 @@ function commands(command) {
     return "";
   } else {
     switch(command.trim()) {
-      case 'help':
+      case 'man':
         if (sounds) new Audio('../audio/help.wav').play();
         return `Commands:<br>
-                <div class='indent'> help </div>
+                <div class='indent'> man </div>
                 <div class='indentMore'> Shows commands. </div>
                 <div class='indent'> exit </div>
                 <div class='indentMore'> Exits out of the terminal back to the homepage. </div>
@@ -89,11 +89,11 @@ function commands(command) {
                 <div class='indent'> export PS1= </div>
                 <div class='indentMore'> Change the terminal prompt to whatever you put after the equal sign. </div>
                 <div class='indent'> sounds </div>
-                <div class='indentMore'> Toggle sounds on and off. </div>
-                <div class='indent'> virtualDOM </div>
-                <div class='indentMore'> Have you ever wondered what the virtual DOM is like? Now is your chance to find out. Note: extremely annoying sounds may ensue. </div>
-                <div class='indent'> shadowDOM </div>
-                <div class='indentMore'> The secret Shadow DOM that hides HTML is finally shown here in its raw naked form! </div>`;
+                <div class='indentMore'> Toggle sounds on and off. </div>`;
+                // <div class='indent'> virtualDOM </div>
+                // <div class='indentMore'> Have you ever wondered what the virtual DOM is like? Now is your chance to find out. Note: extremely annoying sounds may ensue. </div>
+                // <div class='indent'> shadowDOM </div>
+                // <div class='indentMore'> The secret Shadow DOM that hides HTML is finally shown here in its raw naked form! </div>`;
         break;
       case 'ls':
         if (sounds) new Audio('../audio/ls.wav').play();
@@ -115,14 +115,14 @@ function commands(command) {
         location.href = "../index.html";
         return '';
         break;
-      case 'virtualDOM':
-        location.href="virtualDom.html";
-        return '';
-        break;
-      case 'shadowDOM':
-        location.href='shadowDom.html';
-        return '';
-        break;
+      // case 'virtualDOM':
+      //   location.href="virtualDom.html";
+      //   return '';
+      //   break;
+      // case 'shadowDOM':
+      //   location.href='shadowDom.html';
+      //   return '';
+      //   break;
       case 'sounds':
         sounds ? sounds = false : sounds = true;
         if (sounds) new Audio('../audio/soundOn.wav').play();
@@ -130,7 +130,7 @@ function commands(command) {
         return '';
         break;
       case 'clear':
-        $('body').html('');
+        $('.terminal-body').html('');
         if (sounds) new Audio('../audio/clear.wav').play();
         return '';
         break;

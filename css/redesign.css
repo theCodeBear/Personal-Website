@@ -1,0 +1,276 @@
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  text-align: center;
+  padding-top: 0.3em;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+header ul li {
+  display: inline-block;
+  width: 120px;
+  cursor: pointer;
+}
+
+header ul li a {
+  position: relative;
+}
+
+header ul li a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+header ul li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+footer {
+  text-align: center;
+  bottom: 0px;
+  background-color: #444;
+  position: relative;
+  margin-top: 8em;
+}
+
+footer ul {
+  margin-bottom: 0px !important;
+}
+
+footer ul li {
+  display: inline-block;
+  width: 100px;
+  font-size: 1.2em;
+  font-weight: 100;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+footer ul li a {
+  color: white;
+}
+
+footer ul li a:hover {
+  color: white;
+}
+
+.thin-font {
+  font-weight: 200;
+}
+
+.title-display {
+  text-align: center;
+  background: url('../img/theKnobATcropped.JPG');
+  background-size: cover;/*100vw 300px;*/
+  height: 300px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(0.5);
+}
+
+.name {
+  margin-top: 0;
+  padding-top: 0.4em;
+  font-weight: 100;
+}
+
+.title {
+  font-weight: 200;
+  margin-top: 0;
+}
+
+.view-top-margin {
+  margin-top: 2em;
+}
+
+.view-bottom-margin {
+  margin-bottom: 2em;
+}
+
+.view-header {
+  margin-bottom: 1em;
+  font-weight: 100;
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+
+
+/* ABOUT VIEW */
+
+
+/* END OF ABOUT VIEW STYLES */
+
+
+
+
+
+
+/* CONTACT VIEW */
+.contactElement {
+  width: 100%;
+  margin-bottom: 1em;
+  border: none;
+}
+
+button.contactElement {
+  font-size: 2em;
+  font-weight: 100;
+  border: 1px solid darkgray;
+  box-shadow: none;
+}
+
+button.contactElement:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+button.contactElement:active {
+  background-color: #555;
+  color: white;
+}
+
+form[name='contactForm'] {
+  margin-bottom: 5em;
+}
+
+form[name='contactForm'] input {
+  border: none;
+  border-bottom: 1px solid #CCC;
+}
+
+form[name='contactForm'] input:focus {
+  outline: none;
+}
+
+form[name='contactForm'] textarea:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+#emailedMeModal {
+  top: 40%;
+}
+/* END OF CONTACT VIEW STYLES */
+
+
+
+
+/* ABOUT VIEW */
+.profile-photo {
+  display: inline-block;
+  border-radius: 50px;
+  width: 215px;
+  margin-right: 10px;
+}
+
+.big-text {
+  font-size: 1.5em;
+}
+
+/* END OF ABOUT VIEW STYLES */
+
+/* PORTFOLIO VIEW */
+
+/*.portfolio-title {
+  z-index: -10;
+}*/
+
+.portfolio-project {
+  display: inline-block;
+  margin: 50px;
+  position: relative;
+}
+
+.portfolio-image {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.portfolio-pic-container:hover {
+
+}
+
+.portfolio-image {
+  -webkit-filter: blur(0px) grayscale(0) opacity(1);
+  filter: blur(0px) grayscale(0) opacity(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.portfolio-image:hover {
+  -webkit-filter: blur(4px) grayscale(0.9) opacity(0.4);
+  filter: blur(4px) grayscale(0.9) opacity(0.4);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.portfolio-info {
+  position: absolute;
+  font-size: 1.2em;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  color: black;
+  z-index: -1;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* END OF PORTFOLIO VIEW STYLES */
+
+
+
+
+/* EXPERIENCE VIEW */
+
+.experience {
+  padding: 2em;
+}
+
+.experience:hover {
+  box-shadow: 0 0 18px 0 rgba(0,0,0,0.8);
+}
+
+.exp-image {
+  max-width: 100%;
+}
+
+/* END OF EXPERIENCE VIEW STYLES */

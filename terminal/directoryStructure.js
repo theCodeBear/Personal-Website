@@ -39,7 +39,7 @@ var directory = {
     },
     about: {
       name: 'Todd Kronenberg',
-      age: '31 years old',
+      age: '32 years old',
       picture: '../img/winterTodd.jpg',
       description: "I love to code and build fun things on the web. Node.js and Angular are my tools of choice. I've studied Computer Science at university and web development at Coding House bootcamp. After working as a Teaching Assistant at Coding House this year I now am on the hunt for web development positions in the Bay Area. I believe in the ancient Vim gods and know that they will help my code in its quest to conquer machines for all mankind."
     },

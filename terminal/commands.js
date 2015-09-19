@@ -31,9 +31,9 @@ function ls() {
     for (var i=0; i< values.length; i++) {
     // console.log(JSON.stringify(values[i]) + ": " + typeof(values[i]));
       if (typeof(values[i]) === 'string' && values[i].match(/^http/)) {
-        htmlString += "<a href='" + values[i] + "'>" + values[i] + "</a><br>";
+        htmlString += "<a class='terminal-a' href='" + values[i] + "'>" + values[i] + "</a><br>";
       } else if (typeof(values[i]) === 'string' && values[i].match(/^..\/img/)) {
-        htmlString += "<img width='300px' src='" + values[i] + "'><br>";
+        htmlString += "<img class='terminal-img' width='300px' src='" + values[i] + "'><br>";
       } else if (typeof(values[i]) === 'string') {
           htmlString += "<span>"+values[i]+"</span><br>";
       } else {
@@ -67,11 +67,11 @@ function cd(path, dir) {
       currentDirectory = currentDirectory.slice(0,1);
       return '';
     } else {
-      return 'Error: Invalid input. For help run command: help';
+      return 'Error: Invalid input. For help run command: man';
     }
   } else {
     console.log("6: didn't find current directory");
-    return 'Error: Invalid Input. For help run commmand: help';
+    return 'Error: Invalid Input. For help run commmand: man';
   }
   console.log("4: didn't find dir cd'ing into");
   return 'Error: Could not find specified directory.';
