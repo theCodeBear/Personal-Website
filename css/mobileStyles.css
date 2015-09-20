@@ -252,14 +252,14 @@ textarea {
   background-color: black;
   color: white;
   font-family: "Didot";
-  /*height: 420px;*/
   margin-left: 0px;
   margin-right: 0px;
   overflow-y: scroll;
   border-top: 4px solid black;
   margin-bottom: -4em;
-  font-size: 2em;
+  font-size: 30px;
   height: 1500px;
+  padding-bottom: 5em;
 }
 
 .terminal-input {
@@ -284,7 +284,7 @@ textarea {
 
 .orange {
   color: #F90;
-  font-size: 0.4em;
+  /*font-size: 0.4em;*/
 }
 
 .indent {

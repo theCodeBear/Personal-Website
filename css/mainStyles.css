@@ -143,6 +143,7 @@ button.contactElement {
   font-weight: 100;
   border: 1px solid darkgray;
   box-shadow: none;
+  margin-bottom: 0em;
 }
 
 button.contactElement:hover {

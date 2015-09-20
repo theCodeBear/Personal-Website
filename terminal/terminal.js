@@ -55,13 +55,14 @@ $(function() {
 
 function commands(command) {
   var arg;
+  command = command.toLowerCase();
   if (command.trim().match(/^cd\S*/)) {                        // cd command
     if (command.trim().split(" ")[0] !== "cd")
-      return 'Error: Invalid input. For help run the command: help';
+      return 'Error: Invalid input. For help run the command: man';
     arg = command.trim().split(" ")[1] || "";
     if (sounds) new Audio('../audio/cd.wav').play();
     return cd(arg, directory);
-  } else if (command.trim().match(/^export PS1=\S+/)) {          // export PS1= command
+  } else if (command.trim().match(/^export ps1=\S+/)) {          // export PS1= command
     commandPrompt = command.trimLeft().slice(11);
     commandPrompt2 = "";
     commandPrompt3 = "";
@@ -136,7 +137,7 @@ function commands(command) {
         break;
       default:
         if (sounds) new Audio('../audio/error.wav').play();
-        return 'Error: Invalid Input. For help run commmand: help';
+        return 'Error: Invalid Input. For help run commmand: man';
     }
   }
 }
