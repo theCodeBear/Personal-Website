@@ -1,336 +1,298 @@
-/* Style for mobile version of the website */
+/* Styles for mobile devices */
 
-body {
-  overflow-x: hidden;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-body * {
-  /*border: 1px solid red;*/
-}
-
-header {
-  margin-top: 1em;
-  margin-bottom: 2em;
-  font-size: 10em;
-  font-weight: 100;
-  color: white;
-}
-
-section {
-  margin-top: 5em;
+h1 {
+  font-size: 65px;
 }
 
 a {
   color: black;
+}
+
+a:hover {
   text-decoration: none;
+  color: white;
 }
 
-h1 {
-  font-weight: bold;
-  margin-bottom: 1em;
-  font-size: 6em;
+header {
+  text-align: center;
+  padding-top: 0.3em;
+  font-size: 2.5em;
+  font-weight: 100;
+  position: fixed;
+  top: 0px;
+  display: block;
+  width: 100%;
+  background-color: black;
+  z-index: 10000;
+  height: 80px;
 }
 
-h1, h2 {
-  color: black;
+header ul li {
+  display: inline-block;
+  width: 19%;
+  cursor: pointer;
 }
 
-i {
-  color: #000;
-}
-
-li {
-  list-style-type: none;
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-.blackOverlayTop {
-  background: linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
-  background: -webkit-linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
-}
-
-.blackOverlayBottom {
-  background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
-  background: -webkit-linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+header ul li a {
+  position: relative;
+  color: white;
 }
 
 footer {
+  text-align: center;
+  bottom: 0px;
+  background-color: #444;
+  position: fixed;
+  width: 100%;
+  margin-top: 8em;
+}
+
+footer ul {
+  margin-bottom: 0px !important;
+}
+
+footer ul li {
+  display: inline-block;
+  width: 19%;
+  font-size: 2.2em;
+  font-weight: 100;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+footer ul li a {
+  color: white;
+}
+
+footer ul li a:hover {
+  color: white;
+}
+
+.thin-font {
+  font-weight: 200;
+}
+
+.title-display {
+  text-align: center;
+  background: url('../img/theKnobATcropped.JPG');
+  background-size: cover;
+  height: 300px;
+  margin-top: 80px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(0.5);
+}
+
+.name {
+  margin-top: 0;
+  padding-top: 0.4em;
+  font-weight: 100;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.view-top-margin {
   margin-top: 2em;
 }
 
-.container-fluid {
-  overflow-x: hidden;
+.view-bottom-margin {
+  margin-bottom: 2em;
 }
 
-.fa .fa-linkedin-square .fa-3x {
-  margin: 0;
-}
-
-.icons {
-  /* background-color: rgba(255,255,255,0.3); */
-  background-color: white;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  font-size: 2em;
-}
-
-.icon {
-  width: 84px;
-  height: 84px;
-}
-
-
-/* General Modal Stuff */
-.modal-header button {
-  font-size: 5em;
-}
-
-.modal-dialog {
-  width: 90%;
-}
-
-.modal-title {
-  font-size: 5em;
-}
-
-.modal-footer {
+.view-header {
+  margin-bottom: 1em;
+  font-weight: 100;
   text-align: center;
+  text-decoration: underline;
 }
 
-.modal-footer button {
-  font-size: 5em;
+
+/* PORTFOLIO VIEW */
+
+.portfolio-project {
+  display: block;
+  margin: 150px;
+  position: relative;
+}
+
+.portfolio-title {
+  font-size: 3.2em;
+}
+
+.portfolio-image {
+  max-width: 400px;
+  max-height: 600px;
+}
+
+/* END OF PORTFOLIO VIEW STYLES */
+
+
+
+
+/* ABOUT VIEW */
+.profile-photo {
+  display: inline-block;
+  border-radius: 50px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.big-text {
+  font-size: 1.5em;
+}
+
+/* END OF ABOUT VIEW STYLES */
+
+
+
+
+/* CONTACT VIEW */
+.contactElement {
   width: 100%;
   margin-bottom: 1em;
+  border: none;
+  font-size: 3em;
 }
 
-
-/* Modal stuff for projects */
-.modal-header h2 {
+button.contactElement {
   font-size: 4em;
-}
-
-#sigmaShooterVideo {
-  height: 100%;
-}
-
-video {
-  width: 100%;
-  height: 100%;
-}
-
-
-
-
-
-.modal-body input, .modal-body textarea {
-  font-size: 4em;
-  height: 400%;
-}
-
-.whiteColor {
-  color: white;
-  display: none;
-}
-
-.projectTitle {
-  text-align: center;
-}
-
-.projectDescription {
-  margin-top: 1em;
-  font-size: 2em;
-}
-
-.projectTitleRow {
-  background-color: black;
-}
-
-.projectTitleRow * {
-  color: white;
-  font-size: 1.6em;
-}
-
-.projectPics {
-  /*max-height: 200px;*/
-  max-width: 100%;
-  /*min-height: 200px;*/
-  margin-bottom: 5em;
-  margin-top: 5em;
-}
-
-.manualPics {
-  width: 80%;
-}
-
-/* .projectPics:hover { */
-/*   cursor: pointer; */
-/* } */
-
-.inline {
-  display: inline;
-}
-
-.no-padding-margin {
-  margin: 0;
-  padding: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.tags {
-  background-color: green;
-  border-radius: 10px;
-  color: white;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin-right: 1em;
-}
-
-.center {
-  text-align: center;
-}
-
-.video {
-  display: fixed;
-  /*height: 600px;*/
-  /*width: 800px;*/
-}
-
-/* .openVideo:hover { */
-/*   cursor: pointer; */
-/* } */
-
-#logoList {
-  margin-top: 15em;
-}
-
-.logos {
-  min-width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* Gotta do some hackery stuff to the Vim and Mongo logos too look right on mobile */
-#vimLogo {
-  min-width: 98%;
-  margin-top: -15em;
-}
-
-#mongoLogo {
-  margin-left: -65em;
-}
-
-#mainDisplay {
-  background: url('../img/theKnobAT.JPG') no-repeat center center fixed;
-  background-size: cover;
-}
-
-#stickyDiv.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-}
-
-#portfolio img {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-#title {
-  text-align: center;
-  margin: 0;
-  margin-bottom: 8.5em;
   font-weight: 100;
-  font-size: 5em;
+  border: 1px solid darkgray;
+  box-shadow: none;
+}
+
+button.contactElement:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+button.contactElement:active {
+  background-color: #555;
   color: white;
 }
 
-#aboutMe {
-  font-size: 1.3em;
-  margin-bottom: 4em;
+form[name='contactForm'] {
+  margin-bottom: 5em;
 }
 
-#hireMeRow {
-  text-align: center;
-  background-color: black;
-  padding-top: 1em;
-  padding-bottom: 1em;
+form[name='contactForm'] input {
+  border: none;
+  border-bottom: 1px solid #CCC;
 }
 
-#hireMe {
-  background: transparent;
-  border: 1px solid #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 5em;
+form[name='contactForm'] input:focus {
   outline: none;
 }
 
-/* #hireMe:hover { */
-/*   background: #fff; */
-/*   color: #000; */
-/* } */
+form[name='contactForm'] textarea:focus {
+  outline: none;
+}
 
-#aboutMeTitle {
-  margin-top: 1em;
-  margin-bottom: 1em;
+button:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+#emailedMeModal {
+  top: 40%;
+}
+/* END OF CONTACT VIEW STYLES */
+
+
+
+
+
+
+/* EXPERIENCE VIEW */
+
+.experience {
+  padding: 2em;
+  margin-top: 8em;
+}
+
+.experience p {
+  font-size: 2em;
+}
+
+.exp-company {
+  font-size: 3.5em;
+}
+
+.exp-title {
+  font-size: 3em;
+}
+
+.exp-image {
+  max-width: 100%;
+  min-width: 100px;
+}
+
+/* END OF EXPERIENCE VIEW STYLES */
+
+
+
+
+/* TERMINAL STYLES */
+
+.terminal-body {
+  background-color: black;
   color: white;
+  font-family: "Didot";
+  /*height: 420px;*/
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow-y: scroll;
+  border-top: 4px solid black;
+  margin-bottom: -4em;
+  font-size: 2em;
+  height: 1500px;
 }
 
-#aboutMeSection {
-  margin-bottom: 6em;
-  background-color: turquoise;
-  color: black;
-  padding: 2em 0 4em 0;
+.terminal-input {
+  border: none;
+  background-color: black;
+  outline: none;
+  color: lightgreen;
+  font-family: "Didot";
+  /*font-size: 3em;*/
+  width: 40%;
 }
 
-#resume {
-  border: 2px solid white;
-  color: turquoise;
-  padding: 1em 2em 1em 2em;
-  margin-top: 3em;
-  margin-bottom: 5em;
-  border-radius: 15px;
-  font-size: 1.4em;
-  background-color: white
+.terminal-a {
+  text-decoration: none;
+  color: #88F;
+  font-style: italic;
 }
 
-/* #resume:hover { */
-/*   border: 2px solid white; */
-/*   background-color: white; */
-/*   color: turquoise; */
-/* } */
+.terminal-img {
+  max-height: 100%;
+}
 
+.orange {
+  color: #F90;
+  font-size: 0.4em;
+}
 
-/* @-webkit-keyframes throb { */
-/*   0%, 100% { */
-/*     text-shadow: 0; */
-/*   } */
-/*   50% { */
-/*     text-shadow: 0px 0px 2px black; */
-/*   } */
-/* } */
+.indent {
+  margin-left: 3em;
+}
 
-/* keyframes throb { */
-/*   0%, 100% { */
-/*     text-shadow: 0; */
-/*   } */
-/*   50% { */
-/*     text-shadow: 0px 0px 2px black; */
-/*   } */
-/* } */
+.indentMore {
+  margin-left: 6em;
+}
 
-/* .throb { */
-/*   -webkit-animation-name: throb; */
-/*   -webkit-animation-duration: 3s; */
-/*   -webkit-animation-iteration-count: infinite; */
-/*   animation-name: throb; */
-/*   animation-duration: 3s; */
-/*   animation-iteration-count: infinite; */
-/* } */
+/* END OF TERMINAL VIEW STYLES */
