@@ -1,6 +1,34 @@
 var directory = {
   home: {
     portfolio: {
+      'heyu': {
+        title: 'HeyU',
+        url: 'https://github.com/theCodeBear/HeyU',
+        description: 'The quickest way to meet people nearby. A local chatting app that gives you 10 minutes to chat before you decide to say goodbye or meet.',
+        image: '../img/heyu_screenshot.png',
+        techs: 'Techs used: Ionic, Angular, Node, Mongo, Socket.io, ES6, Gulp'
+      },
+      'wirez': {
+        title: 'Wirez',
+        url: 'https://github.com/theCodeBear/Wireframing-app-test',
+        description: 'An easy to use wireframing/prototyping tool to create basic designs and test the flow of your apps.',
+        image: '../img/wirez_screenshot.png',
+        techs: 'Techs used: HTML, CSS, JavaScript, jQuery UI, Parse'
+      },
+      'quicklinks': {
+        title: 'Quick Links',
+        url: 'https://chrome.google.com/webstore/detail/quicklinks/gjalfolejbafbloobnblbfihmhbgdhhe?hl=en-US&gl=US',
+        description: 'Speed dial for the internet. A Google Chrome Extension for saving and using custom keys to link to your favorite sites. Find it in the Chrome Web Store.',
+        image: '../img/quicklinks_screenshot.png',
+        techs: 'Techs used: JavaScript, Chrome APIs'
+      },
+      'know': {
+        title: 'know',
+        url: 'https://play.google.com/store/apps/details?id=com.ionicframework.know313369',
+        description: 'A simple flashcard mobile app for creating and viewing digital flashcards. Now in the Google Play store.',
+        picture: '../img/know_screenshot.png',
+        techs: 'Techs used: Ionic, Angular, Gulp, ES6'
+      },
       'uno-annum': {
         title: 'Uno Annum',
         url: 'https://github.com/theCodeBear/Uno-Annum-mobile',
