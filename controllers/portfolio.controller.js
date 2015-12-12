@@ -24,7 +24,14 @@ angular.module('krone')
       url: 'https://chrome.google.com/webstore/detail/quicklinks/gjalfolejbafbloobnblbfihmhbgdhhe?hl=en-US&gl=US',
       description: 'Speed dial for the internet. A Google Chrome Extension for saving and using custom keys to link to your favorite sites. Find it in the Chrome Web Store.',
       picture: 'img/quicklinks_screenshot.png',
-      techs: ['JavaScript', 'Chrome APIs']
+      techs: ['HTML', 'CSS', 'JavaScript', 'Chrome APIs']
+    },
+    {
+      title: 'Quick Quotes',
+      url: 'https://chrome.google.com/webstore/detail/quick-quotes/ffbpeppefgiiadaogddjejkgfhlpnbni?hl=en-US&utm_source=chrome-ntp-launcher',
+      description: 'A Chrome Extension that lets you select and save quotes you find on the internet and view and link back to them later.',
+      picture: 'img/quickquotes_screenshot.png',
+      techs: ['HTML', 'CSS', 'JavaScript', 'Chrome APIs']
     },
     // {
     //   title: 'Uno Annum',
