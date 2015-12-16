@@ -116,6 +116,7 @@ var directory = {
     contact: {
       email: 'toddkronenberg@gmail.com',
       twitter: 'https://twitter.com/TK_CodeBear',
+      wakatime: 'https://wakatime.com/@toddkronenberg',
       github: 'https://github.com/theCodeBear',
       linkedin: 'https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile'
     },
