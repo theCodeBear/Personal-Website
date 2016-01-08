@@ -8,7 +8,7 @@ angular.module('krone')
     {
       title: 'HeyU',
       url: 'https://github.com/theCodeBear/HeyU',
-      description: 'The quickest way to meet people nearby. A local chatting app that gives you 10 minutes to chat before you decide to say goodbye or meet.',
+      description: 'The quickest way to meet people nearby. A local chatting app that gives you 10 minutes to chat before you decide to say goodbye or meet. Available in Google Play Store.',
       picture: 'img/heyu_screenshot.png',
       techs: ['Ionic', 'Angular', 'Node', 'Mongo', 'Socket.io', 'ES6', 'Gulp']
     },
@@ -18,6 +18,13 @@ angular.module('krone')
       description: 'An easy to use wireframing/prototyping tool to create basic designs and test the flow of your apps.',
       picture: 'img/wirez_screenshot.png',
       techs: ['HTML', 'CSS', 'JavaScript', 'jQuery UI', 'Parse']
+    },
+    {
+      title: "Kid Math",
+      url: "https://play.google.com/store/apps/details?id=com.kronospherelabs.kidmath",
+      description: "A hybrid-mobile app designed to help kids practice and learn Math on the Elementary School level.",
+      picture: "img/KidMath_pic.png",
+      techs: ["HTML", "SASS", "JavaScript", "Angular", "Ionic", "Gulp", "ES6"]
     },
     {
       title: 'Quick Links',
@@ -81,13 +88,6 @@ angular.module('krone')
       description: 'This online marketplace for trading items between users was created by myself and a student at Coding House through pair-programming.',
       picture: 'img/Eddie-Exchange-pic.png',
       techs: ['Jade', 'Angular', 'Hapi.js', 'MongoDB', 'Mandrill']
-    },
-    {
-      title: "Kid Math",
-      url: "https://morning-eyrie-5597.herokuapp.com",
-      description: "Basic math app for children to learn arithmetic. Currently only basic functionality. Note: if on your computer, view in browser 'device mode' as the app is designed for mobile devices only.",
-      picture: "img/KidMath_pic.png",
-      techs: ["JavaScript", "Angular"]
     },
     {
       title: "Drawing Demo",

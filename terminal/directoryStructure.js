@@ -15,6 +15,13 @@ var directory = {
         image: '../img/wirez_screenshot.png',
         techs: 'Techs used: HTML, CSS, JavaScript, jQuery UI, Parse'
       },
+      'kid-math': {
+        title: "Kid Math",
+        url: "https://play.google.com/store/apps/details?id=com.kronospherelabs.kidmath",
+        description: "A hybrid-mobile app designed to help kids practice and learn Math on the Elementary School level. Available in Google Play Store.",
+        image: "../img/KidMath_pic.png",
+        techs: "Techs used: HTML, SASS, JavaScript, Angular, Ionic, Gulp, ES6"
+      },
       'quicklinks': {
         title: 'Quick Links',
         url: 'https://chrome.google.com/webstore/detail/quicklinks/gjalfolejbafbloobnblbfihmhbgdhhe?hl=en-US&gl=US',
@@ -77,13 +84,6 @@ var directory = {
         description: 'This online marketplace for trading items between users was created by myself and a student at Coding House through pair-programming.',
         image: '../img/Eddie-Exchange-pic.png',
         techs: 'Techs used: Jade, Angular, Hapi.js, MongoDB, Mandrill'
-      },
-      'kid-math': {
-        title: "Kid Math",
-        url: "https://morning-eyrie-5597.herokuapp.com",
-        description: "Basic math app for children to learn arithmetic. Currently only basic functionality. Note: if on your computer, view in browser 'device mode' as the app is designed for mobile devices only.",
-        image: "../img/KidMath_pic.png",
-        techs: "Techs used: JavaScript, Angular"
       },
       'drawing-demo': {
         title: "Drawing Demo",
