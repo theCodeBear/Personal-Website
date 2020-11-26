@@ -33,6 +33,14 @@ angular.module('krone')
       picture: "img/CanvasDraw_screenShot.png",
       date: '2014',
       techs: ["JavaScript", "jQuery", "HTML5 Canvas"]
+    },
+    {
+      title: 'Sigma Shooter',
+      url: 'http://toddkronenberg.com/videos/SigmaShooter.mp4',
+      description: "Console Shoot 'em Up game created as my final project in a college Assembly Language course. Written using the MASM Assembler in Visual Studio 2010.",
+      picture: '../img/SigmaShooter_screenShot.png',
+      date: '2013',
+      techs: ['Assembly Language']
     }
   ];
 

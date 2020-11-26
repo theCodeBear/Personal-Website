@@ -1,7 +1,7 @@
 var directory = {
   home: {
     portfolio: {
-      'heyu': {
+      /*'heyu': {
         title: 'HeyU',
         url: 'https://github.com/theCodeBear/HeyU',
         description: 'The quickest way to meet people nearby. A local chatting app that gives you 10 minutes to chat before you decide to say goodbye or meet.',
@@ -21,7 +21,7 @@ var directory = {
         description: "A hybrid-mobile app designed to help kids practice and learn Math on the Elementary School level. Available in Google Play Store.",
         image: "../img/KidMath_pic.png",
         techs: "Techs used: HTML, SASS, JavaScript, Angular, Ionic, Gulp, ES6"
-      },
+      },*/
       'quicklinks': {
         title: 'Quick Links',
         url: 'https://chrome.google.com/webstore/detail/quicklinks/gjalfolejbafbloobnblbfihmhbgdhhe?hl=en-US&gl=US',
@@ -36,7 +36,7 @@ var directory = {
         image: '../img/quickquotes_screenshot.png',
         techs: 'Techs used: HTML, CSS, JavaScript, Chrome APIs'
       },
-      'know': {
+      /*'know': {
         title: 'know',
         url: 'https://play.google.com/store/apps/details?id=com.ionicframework.know313369',
         description: 'A simple flashcard mobile app for creating and viewing digital flashcards. Now in the Google Play store.',
@@ -49,7 +49,7 @@ var directory = {
         description: 'A social year-long photo journal capturing transformations of mind, body, soul, life.',
         image: '../img/unoAnnum.png',
         techs: 'Techs used: Ionic, Angular, Express, MongoDB, AWS_S3'
-      },
+      },*/
       // 'training-buds': {
       //   title: 'Training Buds',
       //   url: 'https://github.com/theCodeBear/social-fit',
@@ -57,7 +57,7 @@ var directory = {
       //   image: '../img/',
       //   techs: 'Techs used: Ionic, Angular, Express, MongoDB, Socket.io'
       // },
-      'blip': {
+      /*'blip': {
         title: 'blip',
         url: 'https://github.com/theCodeBear/_blip',
         description: 'Real-time social discovery of local hotspots. Users can see where people are socializing on the map and see a stream of their comments.',
@@ -84,7 +84,7 @@ var directory = {
         description: 'This online marketplace for trading items between users was created by myself and a student at Coding House through pair-programming.',
         image: '../img/Eddie-Exchange-pic.png',
         techs: 'Techs used: Jade, Angular, Hapi.js, MongoDB, Mandrill'
-      },
+      },*/
       'drawing-demo': {
         title: "Drawing Demo",
         url: "projects/canvasDemo.html",
