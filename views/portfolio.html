@@ -1,9 +1,11 @@
 <div class='row view-top-margin text-center'>
   <div class='col col-xs-offset-1 col-xs-10'>
-    <h1 class='view-header'> Portfolio </h1>
-    <div class='portfolio-project' ng-repeat='project in projects'>
+
+    <h1 class='view-header'> Stupid Little Games </h1>
+    <div class='portfolio-project' ng-repeat='project in stupidLittleGames'>
       <a href='{{project.url}}'>
         <h2 class='portfolio-title thin-font'> {{project.title}} </h2>
+        <div class='thin-font' style='margin-top: -10px'>{{project.date}}</div>
         <div class='portfolio-pic-container' ng-mouseover='showInfo = true' ng-mouseout='showInfo = false'>
           <img ng-src='{{project.picture}}' class='portfolio-image' alt='Project Photo'>
           <span class='portfolio-info' ng-show='showInfo'>
@@ -17,5 +19,46 @@
         </div>
       </a>
     </div>
+    <div style='font-size: 64px; color: rgba(100, 100, 100, 0.5);'>Coming Soon</div>
+    <br><br><br>
+
+    <h1 class='view-header'> Chrome Extensions </h1>
+    <div class='portfolio-project' ng-repeat='project in chromeExtensions'>
+      <a href='{{project.url}}'>
+        <h2 class='portfolio-title thin-font'> {{project.title}} </h2>
+        <div class='thin-font' style='margin-top: -10px'>{{project.date}}</div>
+        <div class='portfolio-pic-container' ng-mouseover='showInfo = true' ng-mouseout='showInfo = false'>
+          <img ng-src='{{project.picture}}' class='portfolio-image' alt='Project Photo'>
+          <span class='portfolio-info' ng-show='showInfo'>
+            {{project.description}}
+            <br><br>
+            <span class='thin-font' ng-repeat='tech in project.techs'>
+              <em>{{tech}}</em>
+              <br>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <h1 class='view-header'> Super Old Stuff</h1>
+    <div class='portfolio-project' ng-repeat='project in superOldStuff'>
+      <a href='{{project.url}}'>
+        <h2 class='portfolio-title thin-font'> {{project.title}} </h2>
+        <div class='thin-font' style='margin-top: -10px'>{{project.date}}</div>
+        <div class='portfolio-pic-container' ng-mouseover='showInfo = true' ng-mouseout='showInfo = false'>
+          <img ng-src='{{project.picture}}' class='portfolio-image' alt='Project Photo'>
+          <span class='portfolio-info' ng-show='showInfo'>
+            {{project.description}}
+            <br><br>
+            <span class='thin-font' ng-repeat='tech in project.techs'>
+              <em>{{tech}}</em>
+              <br>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+
   </div>
 </div>
