@@ -4,7 +4,16 @@ angular.module('krone')
 
 .controller('PortfolioCtrl', function($scope) {
 
-  $scope.stupidLittleGames = [];
+  $scope.stupidLittleGames = [
+    {
+      title: 'Shooter One',
+      url: '/games/shooterOne',
+      description: 'First Game. Made in Phaser.',
+      picture: 'img/shooter1.png',
+      date: 'May 2021',
+      techs: ['Javascript, Phaser']
+    }
+  ];
 
   $scope.chromeExtensions = [
     {
@@ -36,7 +45,7 @@ angular.module('krone')
     },
     {
       title: 'Sigma Shooter',
-      url: 'http://toddkronenberg.com/videos/SigmaShooter.mp4',
+      url: 'videos/SigmaShooter.mp4',
       description: "Console Shoot 'em Up game created as my final project in a college Assembly Language course. Written using the MASM Assembler in Visual Studio 2010.",
       picture: '../img/SigmaShooter_screenShot.png',
       date: '2013',
