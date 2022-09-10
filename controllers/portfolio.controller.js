@@ -12,6 +12,14 @@ angular.module('krone')
       picture: 'img/shooter1.png',
       date: 'May 2021',
       techs: ['Javascript, Phaser']
+    },
+    {
+      title: 'Bomb Dodger',
+      url: '/games/bombDodger',
+      description: 'First Game made with Godot.',
+      picture: 'img/bombDodger.png',
+      date: 'September 2022',
+      techs: ['Godot']
     }
   ];
 
