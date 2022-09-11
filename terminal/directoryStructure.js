@@ -105,7 +105,21 @@ var directory = {
         description: "Written in C++ using the Linear Algebra-related cryptographic Hill Cipher. Plain text is converted into a matrix, then encrypted using a randomly generated 3x3 matrix. The decryption involves calculating the inverse of the encryption matrix and applying it to the cipher text.",
         image: '../img/hillCipher.png',
         techs: 'Techs used: C++'
-      }
+      },
+      'shooter-one': {
+        title: 'Shooter One',
+        url: 'http://toddkronenberg.com/games/shooterOne/',
+        description: "A web game made with Phaser.io. My first graphical game. Made in May 2021.",
+        image: '../img/shooter1.png',
+        techs: 'Techs used: JavaScript, Phaser'
+      },
+      'bomb-dodger': {
+        title: 'Bomb Dodger',
+        url: 'http://toddkronenberg.com/games/bombDodger/',
+        description: "My first little learning test game made with the Godot game engine. Made in September 2022.",
+        image: '../img/bombDodger.png',
+        techs: 'Techs used: Godot'
+      },
     },
     about: {
       name: 'Todd Kronenberg',
